@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestGest", "RestGest\RestGest.csproj", "{CF60EF25-DB43-4958-BEC0-4FBEC09CA909}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF60EF25-DB43-4958-BEC0-4FBEC09CA909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF60EF25-DB43-4958-BEC0-4FBEC09CA909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF60EF25-DB43-4958-BEC0-4FBEC09CA909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF60EF25-DB43-4958-BEC0-4FBEC09CA909}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7152213E-50CB-4FF7-BE9D-1485B8F11A3B}
+	EndGlobalSection
+EndGlobal
