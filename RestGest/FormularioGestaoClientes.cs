@@ -12,60 +12,11 @@ namespace WindowsFormsApp1
 {
     public partial class FormularioGestaoClientes : Form
     {
-        public bool editar=false;
         public static RestGestContainer restGestContainer;
         public FormularioGestaoClientes()
         {
             InitializeComponent();
-            ChangeUI(true);
         }
-
-        private void Limpar()
-        {
-            textBoxNome.Clear();
-            textBoxRua.Clear();
-            textBoxCidade.Clear();
-            textBoxCodPostal.Clear();
-            textBoxPais.Clear();
-            textBoxTelemovel.Clear();
-            textBoxNumContribuinte.Clear();
-            textBoxTotalGasto.Clear();
-        }
-        private void ChangeUI(bool res)
-        {
-            Limpar();
-            listBoxClientes.Enabled = res;
-            buttonApagarCliente.Enabled = res;
-            buttonEditarCliente.Enabled = res;
-            buttonAdicionarCliente.Enabled = res;
-
-            textBoxNome.Enabled = !res;
-            textBoxRua.Enabled = !res;
-            textBoxCidade.Enabled = !res;
-            textBoxCodPostal.Enabled = !res;
-            textBoxPais.Enabled = !res;
-            textBoxTelemovel.Enabled = !res;
-            textBoxNumContribuinte.Enabled = !res;
-            textBoxTotalGasto.Enabled = !res;
-
-            label7.Visible = res;
-            textBoxTotalGasto.Visible = res;
-
-            buttonDone.Visible = !res;
-            buttonClose.Visible = !res;
-
-        }
-        private void buttonAdicionarCliente_Click(object sender, EventArgs e)
-        {
-            editar = false;
-            ChangeUI(false);
-        }
-
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            ChangeUI(true);
-        }
-
         private void FormularioGestaoClientes_Load(object sender, EventArgs e)
         {
             restGestContainer = new RestGestContainer();
@@ -80,89 +31,88 @@ namespace WindowsFormsApp1
             restGestContainer.Dispose();
         }
 
-        private void buttonDone_Click(object sender, EventArgs e)
+        private void buttonAdicionarClientes_Click(object sender, EventArgs e)
         {
-            Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
-            Cliente cliente = new Cliente();
-            Morada morada = new Morada();
-            cliente.Nome = textBoxNome.Text;
-            morada.Rua = textBoxRua.Text;
-            morada.Cidade = textBoxCidade.Text;
-            morada.CodPostal = textBoxCodPostal.Text;
-            morada.Pais = textBoxPais.Text;
-            cliente.Telemovel = textBoxTelemovel.Text;
-            cliente.NumContribuinte = textBoxNumContribuinte.Text;
-            cliente.Morada = morada;
-
-            if(!editar)
+            using (FormAddClientes formAddClientes = new FormAddClientes())
             {
-                restGestContainer.Pessoas.Add(cliente);
-            }
-            else
-            {
-                foreach(Cliente clienteTemp in restGestContainer.Pessoas.OfType<Cliente>())
+                var result = formAddClientes.ShowDialog();
+                if (result == DialogResult.OK)
                 {
-                    if(clienteTemp.Id == clienteSelecionado.Id)
-                    {
-                        clienteTemp.Nome = cliente.Nome;
-                        clienteTemp.Morada.Rua = cliente.Morada.Rua;
-                        clienteTemp.Morada.Cidade = cliente.Morada.Cidade;
-                        clienteTemp.Morada.CodPostal = cliente.Morada.CodPostal;
-                        clienteTemp.Morada.Pais = cliente.Morada.Pais;
-                        clienteTemp.Telemovel = cliente.Telemovel;
-                        clienteTemp.NumContribuinte = cliente.NumContribuinte;
-                        break;
-                    }
+                    Cliente novoCliente = new Cliente();
+                    novoCliente.Nome = formAddClientes.nome;
+                    novoCliente.Morada = formAddClientes.morada;
+                    novoCliente.NumContribuinte = formAddClientes.numContribuinte;
+                    novoCliente.Telemovel = formAddClientes.telemovel;
+
+
+                    restGestContainer.Pessoas.Add(novoCliente);
+
+                    restGestContainer.SaveChanges();
+                    LerDados();
                 }
             }
-            
+        }
+
+        private void buttonRemoverClientes_Click(object sender, EventArgs e)
+        {
+            Cliente clienteSelecionado = listBoxClientes.SelectedItem as Cliente;
+            if (clienteSelecionado == null)
+            {
+                MessageBox.Show("Precisa de selecionar um cliente!");
+                return;
+            }
+            restGestContainer.Pessoas.Remove(clienteSelecionado);
             restGestContainer.SaveChanges();
             LerDados();
-            ChangeUI(true);
+        }
+
+        private void buttonEditarClientes_Click(object sender, EventArgs e)
+        {
+            Cliente clienteSelecionado = listBoxClientes.SelectedItem as Cliente;
+            if (clienteSelecionado == null)
+            {
+                MessageBox.Show("Precisa de selecionar um cliente!");
+                return;
+            }
+
+            using (FormAddClientes formAddClientes = new FormAddClientes(clienteSelecionado.Nome, clienteSelecionado.Morada, clienteSelecionado.Telemovel, clienteSelecionado.NumContribuinte))
+            {
+                var result = formAddClientes.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    foreach(Cliente cliente in restGestContainer.Pessoas.OfType<Cliente>())
+                    {
+                        if(cliente == clienteSelecionado)
+                        {
+                            cliente.Nome = formAddClientes.nome;
+                            cliente.Morada = formAddClientes.morada;
+                            cliente.Telemovel = formAddClientes.telemovel;
+                            cliente.NumContribuinte = formAddClientes.numContribuinte;
+                        }
+
+                    }
+
+                    restGestContainer.SaveChanges();
+                    LerDados();
+                }
+            }
         }
 
         private void listBoxClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Pessoa pessoaSelecionada = (Pessoa)listBoxClientes.SelectedItem;
-            textBoxNome.Text = pessoaSelecionada.Nome;
-            textBoxRua.Text = pessoaSelecionada.Morada.Rua;
-            textBoxCidade.Text = pessoaSelecionada.Morada.Cidade;
-            textBoxCodPostal.Text = pessoaSelecionada.Morada.CodPostal;
-            textBoxPais.Text = pessoaSelecionada.Morada.Pais;
-            textBoxTelemovel.Text = pessoaSelecionada.Telemovel;
-
-            
-        }
-
-        private void buttonEditarCliente_Click(object sender, EventArgs e)
-        {
-            ChangeUI(false);
-            editar = true;
-            Pessoa pessoaSelecionada = (Pessoa)listBoxClientes.SelectedItem;
-            textBoxNome.Text = pessoaSelecionada.Nome;
-            textBoxRua.Text = pessoaSelecionada.Morada.Rua;
-            textBoxCidade.Text = pessoaSelecionada.Morada.Cidade;
-            textBoxCodPostal.Text = pessoaSelecionada.Morada.CodPostal;
-            textBoxPais.Text = pessoaSelecionada.Morada.Pais;
-            textBoxTelemovel.Text = pessoaSelecionada.Telemovel;
-
-        }
-
-        private void buttonApagarCliente_Click(object sender, EventArgs e)
-        {
-            Pessoa pessoaSelecionada = (Pessoa)listBoxClientes.SelectedItem;
-            if (pessoaSelecionada == null)
+            Cliente clienteSelecionado = listBoxClientes.SelectedItem as Cliente;
+            if (clienteSelecionado != null)
             {
-                return;
-            }
+                labelNome.Text = clienteSelecionado.Nome;
+                labelRua.Text = clienteSelecionado.Morada.Rua;
+                labelCidade.Text = clienteSelecionado.Morada.Cidade;
+                labelCodPostal.Text = clienteSelecionado.Morada.CodPostal;
+                labelPais.Text = clienteSelecionado.Morada.Pais;
+                labelTelemovel.Text = clienteSelecionado.Telemovel;
+                labelTotalGasto.Text = clienteSelecionado.TotalGasto + "€";
+                labelNumContribuinte.Text = clienteSelecionado.NumContribuinte;
 
-            // Remove o cliente e os carros associados (cascade)
-            restGestContainer.Pessoas.Remove(pessoaSelecionada);
-            // Guarda alterações na DB
-            restGestContainer.SaveChanges();
-            Limpar();
-            // Atualiza dados de clientes existentes
-            LerDados();
+            }
         }
     }
 }

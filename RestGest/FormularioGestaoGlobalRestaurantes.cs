@@ -198,5 +198,10 @@ namespace WindowsFormsApp1
             listBoxCategorias.DataSource = restGestContainer.Categorias.ToList();
             listBoxMetodosPagamento.DataSource = restGestContainer.MetodosPagamento.ToList();
         }
+
+        private void FormularioGestaoGlobalRestaurantes_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            restGestContainer.Dispose();
+        }
     }
 }

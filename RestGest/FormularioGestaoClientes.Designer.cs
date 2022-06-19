@@ -28,302 +28,324 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonPesquisarRestaurantes = new System.Windows.Forms.Button();
+            this.textBoxPesquisarRestaurantes = new System.Windows.Forms.TextBox();
             this.listBoxClientes = new System.Windows.Forms.ListBox();
-            this.buttonAdicionarCliente = new System.Windows.Forms.Button();
-            this.buttonEditarCliente = new System.Windows.Forms.Button();
-            this.buttonApagarCliente = new System.Windows.Forms.Button();
-            this.textBoxNome = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxRua = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxCidade = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxCodPostal = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBoxPais = new System.Windows.Forms.TextBox();
+            this.buttonAdicionarClientes = new System.Windows.Forms.Button();
+            this.buttonEditarClientes = new System.Windows.Forms.Button();
+            this.buttonRemoverClientes = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labelTelemovel = new System.Windows.Forms.Label();
+            this.labelNumContribuinte = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.labelPais = new System.Windows.Forms.Label();
+            this.labelCodPostal = new System.Windows.Forms.Label();
+            this.labelRua = new System.Windows.Forms.Label();
+            this.labelCidade = new System.Windows.Forms.Label();
+            this.labelTotalGasto = new System.Windows.Forms.Label();
+            this.labelNome = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxTelemovel = new System.Windows.Forms.TextBox();
-            this.textBoxTotalGasto = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBoxNumContribuinte = new System.Windows.Forms.TextBox();
-            this.buttonDone = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.buttonPesquisarRestaurantes);
+            this.groupBox1.Controls.Add(this.textBoxPesquisarRestaurantes);
+            this.groupBox1.Controls.Add(this.listBoxClientes);
+            this.groupBox1.Controls.Add(this.buttonAdicionarClientes);
+            this.groupBox1.Controls.Add(this.buttonEditarClientes);
+            this.groupBox1.Controls.Add(this.buttonRemoverClientes);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(284, 418);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Clientes";
+            // 
+            // buttonPesquisarRestaurantes
+            // 
+            this.buttonPesquisarRestaurantes.Location = new System.Drawing.Point(226, 42);
+            this.buttonPesquisarRestaurantes.Name = "buttonPesquisarRestaurantes";
+            this.buttonPesquisarRestaurantes.Size = new System.Drawing.Size(38, 23);
+            this.buttonPesquisarRestaurantes.TabIndex = 13;
+            this.buttonPesquisarRestaurantes.Text = "Pesquisar";
+            this.buttonPesquisarRestaurantes.UseVisualStyleBackColor = true;
+            // 
+            // textBoxPesquisarRestaurantes
+            // 
+            this.textBoxPesquisarRestaurantes.Location = new System.Drawing.Point(16, 42);
+            this.textBoxPesquisarRestaurantes.Name = "textBoxPesquisarRestaurantes";
+            this.textBoxPesquisarRestaurantes.Size = new System.Drawing.Size(204, 20);
+            this.textBoxPesquisarRestaurantes.TabIndex = 13;
             // 
             // listBoxClientes
             // 
             this.listBoxClientes.FormattingEnabled = true;
-            this.listBoxClientes.Location = new System.Drawing.Point(9, 10);
+            this.listBoxClientes.Location = new System.Drawing.Point(16, 90);
             this.listBoxClientes.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxClientes.Name = "listBoxClientes";
-            this.listBoxClientes.Size = new System.Drawing.Size(212, 316);
+            this.listBoxClientes.Size = new System.Drawing.Size(248, 264);
             this.listBoxClientes.TabIndex = 0;
             this.listBoxClientes.SelectedIndexChanged += new System.EventHandler(this.listBoxClientes_SelectedIndexChanged);
             // 
-            // buttonAdicionarCliente
+            // buttonAdicionarClientes
             // 
-            this.buttonAdicionarCliente.Location = new System.Drawing.Point(9, 346);
-            this.buttonAdicionarCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonAdicionarCliente.Name = "buttonAdicionarCliente";
-            this.buttonAdicionarCliente.Size = new System.Drawing.Size(211, 19);
-            this.buttonAdicionarCliente.TabIndex = 1;
-            this.buttonAdicionarCliente.Text = "Adicionar Cliente";
-            this.buttonAdicionarCliente.UseVisualStyleBackColor = true;
-            this.buttonAdicionarCliente.Click += new System.EventHandler(this.buttonAdicionarCliente_Click);
+            this.buttonAdicionarClientes.Location = new System.Drawing.Point(16, 367);
+            this.buttonAdicionarClientes.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAdicionarClientes.Name = "buttonAdicionarClientes";
+            this.buttonAdicionarClientes.Size = new System.Drawing.Size(80, 36);
+            this.buttonAdicionarClientes.TabIndex = 3;
+            this.buttonAdicionarClientes.Text = "Adicionar";
+            this.buttonAdicionarClientes.UseVisualStyleBackColor = true;
+            this.buttonAdicionarClientes.Click += new System.EventHandler(this.buttonAdicionarClientes_Click);
             // 
-            // buttonEditarCliente
+            // buttonEditarClientes
             // 
-            this.buttonEditarCliente.Location = new System.Drawing.Point(9, 370);
-            this.buttonEditarCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonEditarCliente.Name = "buttonEditarCliente";
-            this.buttonEditarCliente.Size = new System.Drawing.Size(211, 19);
-            this.buttonEditarCliente.TabIndex = 2;
-            this.buttonEditarCliente.Text = "Editar Cliente";
-            this.buttonEditarCliente.UseVisualStyleBackColor = true;
-            this.buttonEditarCliente.Click += new System.EventHandler(this.buttonEditarCliente_Click);
+            this.buttonEditarClientes.Location = new System.Drawing.Point(184, 367);
+            this.buttonEditarClientes.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonEditarClientes.Name = "buttonEditarClientes";
+            this.buttonEditarClientes.Size = new System.Drawing.Size(80, 36);
+            this.buttonEditarClientes.TabIndex = 6;
+            this.buttonEditarClientes.Text = "Editar";
+            this.buttonEditarClientes.UseVisualStyleBackColor = true;
+            this.buttonEditarClientes.Click += new System.EventHandler(this.buttonEditarClientes_Click);
             // 
-            // buttonApagarCliente
+            // buttonRemoverClientes
             // 
-            this.buttonApagarCliente.Location = new System.Drawing.Point(9, 393);
-            this.buttonApagarCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonApagarCliente.Name = "buttonApagarCliente";
-            this.buttonApagarCliente.Size = new System.Drawing.Size(211, 19);
-            this.buttonApagarCliente.TabIndex = 3;
-            this.buttonApagarCliente.Text = "Apagar Cliente";
-            this.buttonApagarCliente.UseVisualStyleBackColor = true;
-            this.buttonApagarCliente.Click += new System.EventHandler(this.buttonApagarCliente_Click);
+            this.buttonRemoverClientes.Location = new System.Drawing.Point(100, 367);
+            this.buttonRemoverClientes.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonRemoverClientes.Name = "buttonRemoverClientes";
+            this.buttonRemoverClientes.Size = new System.Drawing.Size(80, 36);
+            this.buttonRemoverClientes.TabIndex = 9;
+            this.buttonRemoverClientes.Text = "Remover";
+            this.buttonRemoverClientes.UseVisualStyleBackColor = true;
+            this.buttonRemoverClientes.Click += new System.EventHandler(this.buttonRemoverClientes_Click);
             // 
-            // textBoxNome
+            // groupBox2
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(318, 33);
-            this.textBoxNome.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(173, 20);
-            this.textBoxNome.TabIndex = 5;
+            this.groupBox2.Controls.Add(this.labelTelemovel);
+            this.groupBox2.Controls.Add(this.labelNumContribuinte);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.labelPais);
+            this.groupBox2.Controls.Add(this.labelCodPostal);
+            this.groupBox2.Controls.Add(this.labelRua);
+            this.groupBox2.Controls.Add(this.labelCidade);
+            this.groupBox2.Controls.Add(this.labelTotalGasto);
+            this.groupBox2.Controls.Add(this.labelNome);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(313, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(512, 418);
+            this.groupBox2.TabIndex = 14;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Informações do cliente";
             // 
-            // label1
+            // labelTelemovel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(274, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Nome";
+            this.labelTelemovel.AutoSize = true;
+            this.labelTelemovel.Location = new System.Drawing.Point(31, 169);
+            this.labelTelemovel.Name = "labelTelemovel";
+            this.labelTelemovel.Size = new System.Drawing.Size(0, 13);
+            this.labelTelemovel.TabIndex = 15;
             // 
-            // label2
+            // labelNumContribuinte
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(283, 79);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Rua";
+            this.labelNumContribuinte.AutoSize = true;
+            this.labelNumContribuinte.Location = new System.Drawing.Point(198, 169);
+            this.labelNumContribuinte.Name = "labelNumContribuinte";
+            this.labelNumContribuinte.Size = new System.Drawing.Size(0, 13);
+            this.labelNumContribuinte.TabIndex = 14;
             // 
-            // textBoxRua
+            // label9
             // 
-            this.textBoxRua.Location = new System.Drawing.Point(318, 76);
-            this.textBoxRua.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxRua.Name = "textBoxRua";
-            this.textBoxRua.Size = new System.Drawing.Size(173, 20);
-            this.textBoxRua.TabIndex = 7;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(197, 133);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(136, 20);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Nº Contribuinte:";
             // 
-            // label3
+            // label10
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(268, 118);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Cidade";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(30, 133);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 20);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Telemovel:";
             // 
-            // textBoxCidade
+            // labelPais
             // 
-            this.textBoxCidade.Location = new System.Drawing.Point(318, 115);
-            this.textBoxCidade.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxCidade.Name = "textBoxCidade";
-            this.textBoxCidade.Size = new System.Drawing.Size(173, 20);
-            this.textBoxCidade.TabIndex = 9;
+            this.labelPais.AutoSize = true;
+            this.labelPais.Location = new System.Drawing.Point(201, 362);
+            this.labelPais.Name = "labelPais";
+            this.labelPais.Size = new System.Drawing.Size(0, 13);
+            this.labelPais.TabIndex = 11;
             // 
-            // label4
+            // labelCodPostal
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(254, 160);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "CodPostal";
+            this.labelCodPostal.AutoSize = true;
+            this.labelCodPostal.Location = new System.Drawing.Point(34, 362);
+            this.labelCodPostal.Name = "labelCodPostal";
+            this.labelCodPostal.Size = new System.Drawing.Size(0, 13);
+            this.labelCodPostal.TabIndex = 10;
             // 
-            // textBoxCodPostal
+            // labelRua
             // 
-            this.textBoxCodPostal.Location = new System.Drawing.Point(318, 158);
-            this.textBoxCodPostal.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxCodPostal.Name = "textBoxCodPostal";
-            this.textBoxCodPostal.Size = new System.Drawing.Size(173, 20);
-            this.textBoxCodPostal.TabIndex = 11;
+            this.labelRua.AutoSize = true;
+            this.labelRua.Location = new System.Drawing.Point(34, 267);
+            this.labelRua.Name = "labelRua";
+            this.labelRua.Size = new System.Drawing.Size(0, 13);
+            this.labelRua.TabIndex = 9;
             // 
-            // label5
+            // labelCidade
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(274, 200);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Pais";
+            this.labelCidade.AutoSize = true;
+            this.labelCidade.Location = new System.Drawing.Point(201, 267);
+            this.labelCidade.Name = "labelCidade";
+            this.labelCidade.Size = new System.Drawing.Size(0, 13);
+            this.labelCidade.TabIndex = 8;
             // 
-            // textBoxPais
+            // labelTotalGasto
             // 
-            this.textBoxPais.Location = new System.Drawing.Point(318, 197);
-            this.textBoxPais.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxPais.Name = "textBoxPais";
-            this.textBoxPais.Size = new System.Drawing.Size(173, 20);
-            this.textBoxPais.TabIndex = 13;
+            this.labelTotalGasto.AutoSize = true;
+            this.labelTotalGasto.Location = new System.Drawing.Point(453, 72);
+            this.labelTotalGasto.Name = "labelTotalGasto";
+            this.labelTotalGasto.Size = new System.Drawing.Size(0, 13);
+            this.labelTotalGasto.TabIndex = 7;
+            this.labelTotalGasto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelNome
+            // 
+            this.labelNome.AutoSize = true;
+            this.labelNome.Location = new System.Drawing.Point(29, 72);
+            this.labelNome.Name = "labelNome";
+            this.labelNome.Size = new System.Drawing.Size(0, 13);
+            this.labelNome.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(253, 239);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(200, 332);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Telemovel";
+            this.label6.Size = new System.Drawing.Size(48, 20);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Pais:";
             // 
-            // textBoxTelemovel
+            // label5
             // 
-            this.textBoxTelemovel.Location = new System.Drawing.Point(318, 236);
-            this.textBoxTelemovel.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxTelemovel.Name = "textBoxTelemovel";
-            this.textBoxTelemovel.Size = new System.Drawing.Size(173, 20);
-            this.textBoxTelemovel.TabIndex = 15;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(30, 332);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 20);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Cod. Postal:";
             // 
-            // textBoxTotalGasto
+            // label4
             // 
-            this.textBoxTotalGasto.Location = new System.Drawing.Point(318, 306);
-            this.textBoxTotalGasto.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxTotalGasto.Name = "textBoxTotalGasto";
-            this.textBoxTotalGasto.Size = new System.Drawing.Size(173, 20);
-            this.textBoxTotalGasto.TabIndex = 17;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(200, 231);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Cidade:";
             // 
-            // label8
+            // label3
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(226, 275);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Num Contribuinte";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(33, 231);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Rua:";
             // 
-            // textBoxNumContribuinte
+            // label2
             // 
-            this.textBoxNumContribuinte.Location = new System.Drawing.Point(318, 272);
-            this.textBoxNumContribuinte.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxNumContribuinte.Name = "textBoxNumContribuinte";
-            this.textBoxNumContribuinte.Size = new System.Drawing.Size(173, 20);
-            this.textBoxNumContribuinte.TabIndex = 19;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(389, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Total Gasto:";
             // 
-            // buttonDone
+            // label1
             // 
-            this.buttonDone.Location = new System.Drawing.Point(251, 358);
-            this.buttonDone.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonDone.Name = "buttonDone";
-            this.buttonDone.Size = new System.Drawing.Size(106, 42);
-            this.buttonDone.TabIndex = 21;
-            this.buttonDone.Text = "Done";
-            this.buttonDone.UseVisualStyleBackColor = true;
-            this.buttonDone.Visible = false;
-            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.Location = new System.Drawing.Point(376, 358);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(106, 42);
-            this.buttonClose.TabIndex = 22;
-            this.buttonClose.Text = "Close";
-            this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Visible = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(249, 309);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 13);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Total Gasto";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(25, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nome:";
             // 
             // FormularioGestaoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 473);
-            this.Controls.Add(this.buttonClose);
-            this.Controls.Add(this.buttonDone);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBoxNumContribuinte);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBoxTotalGasto);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBoxTelemovel);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxPais);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxCodPostal);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxCidade);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxRua);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxNome);
-            this.Controls.Add(this.buttonApagarCliente);
-            this.Controls.Add(this.buttonEditarCliente);
-            this.Controls.Add(this.buttonAdicionarCliente);
-            this.Controls.Add(this.listBoxClientes);
+            this.ClientSize = new System.Drawing.Size(837, 434);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormularioGestaoClientes";
             this.Text = "Gestão de Clientes";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormularioGestaoClientes_FormClosing);
             this.Load += new System.EventHandler(this.FormularioGestaoClientes_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button buttonPesquisarRestaurantes;
+        private System.Windows.Forms.TextBox textBoxPesquisarRestaurantes;
         private System.Windows.Forms.ListBox listBoxClientes;
-        private System.Windows.Forms.Button buttonAdicionarCliente;
-        private System.Windows.Forms.Button buttonEditarCliente;
-        private System.Windows.Forms.Button buttonApagarCliente;
-        private System.Windows.Forms.TextBox textBoxNome;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxRua;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxCidade;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxCodPostal;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxPais;
+        private System.Windows.Forms.Button buttonAdicionarClientes;
+        private System.Windows.Forms.Button buttonEditarClientes;
+        private System.Windows.Forms.Button buttonRemoverClientes;
+        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxTelemovel;
-        private System.Windows.Forms.TextBox textBoxTotalGasto;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBoxNumContribuinte;
-        private System.Windows.Forms.Button buttonDone;
-        private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelPais;
+        private System.Windows.Forms.Label labelCodPostal;
+        private System.Windows.Forms.Label labelRua;
+        private System.Windows.Forms.Label labelCidade;
+        private System.Windows.Forms.Label labelTotalGasto;
+        private System.Windows.Forms.Label labelNome;
+        private System.Windows.Forms.Label labelTelemovel;
+        private System.Windows.Forms.Label labelNumContribuinte;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
 

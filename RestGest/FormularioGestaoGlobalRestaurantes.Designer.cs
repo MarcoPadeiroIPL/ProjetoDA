@@ -284,6 +284,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormularioGestaoGlobalRestaurantes";
             this.Text = "Gestão Global de Restaurantes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormularioGestaoGlobalRestaurantes_FormClosing);
             this.Load += new System.EventHandler(this.FormularioGestaoGlobalRestaurantes_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

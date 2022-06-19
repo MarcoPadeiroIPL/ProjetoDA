@@ -61,3 +61,4 @@ C:\Users\Marco\Desktop\Escola\DA\RestGest\ProjetoDA\RestGest\obj\Debug\WindowsFo
 C:\Users\Marco\Desktop\Escola\DA\RestGest\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddRestaurante.resources
 C:\Users\Marco\Desktop\Escola\DA\RestGest\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddCategoria.resources
 C:\Users\Marco\Desktop\Escola\DA\RestGest\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddMetodo.resources
+C:\Users\Marco\Desktop\Escola\DA\RestGest\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddClientes.resources
