@@ -19,9 +19,5 @@ namespace WindowsFormsApp1
         public string Telemovel { get; set; }
     
         public virtual Morada Morada { get; set; }
-        public override string ToString()
-        {
-            return Nome + " (" + Telemovel + ") ";
-        }
     }
 }

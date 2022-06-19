@@ -16,5 +16,10 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void buttonNovoPedido_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

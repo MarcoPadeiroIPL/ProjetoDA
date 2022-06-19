@@ -73,8 +73,7 @@ namespace WindowsFormsApp1
         }
         private void LerDados()
         {
-            listBoxClientes.DataSource
-                = restGestContainer.Pessoas.ToList();
+            listBoxClientes.DataSource = restGestContainer.Pessoas.OfType<Cliente>().ToList();
         }
         private void FormularioGestaoClientes_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -83,31 +82,38 @@ namespace WindowsFormsApp1
 
         private void buttonDone_Click(object sender, EventArgs e)
         {
-            Pessoa pessoaSelecionada = (Pessoa)listBoxClientes.SelectedItem;
-            Pessoa pessoa = new Pessoa();
+            Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
+            Cliente cliente = new Cliente();
             Morada morada = new Morada();
-            pessoa.Nome = textBoxNome.Text;
+            cliente.Nome = textBoxNome.Text;
             morada.Rua = textBoxRua.Text;
             morada.Cidade = textBoxCidade.Text;
             morada.CodPostal = textBoxCodPostal.Text;
             morada.Pais = textBoxPais.Text;
-            pessoa.Telemovel = textBoxTelemovel.Text;
-            pessoa.Morada = morada;
+            cliente.Telemovel = textBoxTelemovel.Text;
+            cliente.NumContribuinte = textBoxNumContribuinte.Text;
+            cliente.Morada = morada;
 
             if(!editar)
             {
-                restGestContainer.Pessoas.Add(pessoa);
+                restGestContainer.Pessoas.Add(cliente);
             }
             else
             {
-                Pessoa a = restGestContainer.Pessoas.Find(pessoaSelecionada.Id);
-                a.Nome = pessoa.Nome;
-                a.Morada.Rua = pessoa.Morada.Rua;
-                a.Morada.Cidade = pessoa.Morada.Cidade;
-                a.Morada.CodPostal = pessoa.Morada.CodPostal;
-                a.Morada.Pais = pessoa.Morada.Pais;
-                a.Telemovel = pessoa.Telemovel;
-
+                foreach(Cliente clienteTemp in restGestContainer.Pessoas.OfType<Cliente>())
+                {
+                    if(clienteTemp.Id == clienteSelecionado.Id)
+                    {
+                        clienteTemp.Nome = cliente.Nome;
+                        clienteTemp.Morada.Rua = cliente.Morada.Rua;
+                        clienteTemp.Morada.Cidade = cliente.Morada.Cidade;
+                        clienteTemp.Morada.CodPostal = cliente.Morada.CodPostal;
+                        clienteTemp.Morada.Pais = cliente.Morada.Pais;
+                        clienteTemp.Telemovel = cliente.Telemovel;
+                        clienteTemp.NumContribuinte = cliente.NumContribuinte;
+                        break;
+                    }
+                }
             }
             
             restGestContainer.SaveChanges();

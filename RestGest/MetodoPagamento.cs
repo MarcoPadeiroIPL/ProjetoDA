@@ -26,5 +26,11 @@ namespace WindowsFormsApp1
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pagamento> Pagamentoes { get; set; }
+
+        public override string ToString()
+        {
+            string ativoString = this.Ativo == true ? "Ativo" : "Não ativo";
+            return this.Metodo + " (" + ativoString + ")";
+        }
     }
 }

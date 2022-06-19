@@ -12,9 +12,30 @@ namespace WindowsFormsApp1
 {
     public partial class FormularioMenu : Form
     {
+        public static RestGestContainer restGestContainer;
         public FormularioMenu()
         {
             InitializeComponent();
         }
+
+        private void listBoxRestaurantes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Restaurante restauranteSelecionado = (Restaurante)listBoxRestaurantes.SelectedItem;
+            foreach(ItemMenu itemMenu in restauranteSelecionado.ItemMenus)
+            {
+                listBoxMenus.Items.Add(itemMenu);
+            }
+        }
+
+        private void FormularioMenu_Load(object sender, EventArgs e)
+        {
+            restGestContainer = new RestGestContainer();
+            LerDados();
+        }
+        private void LerDados()
+        {
+            listBoxRestaurantes.DataSource = restGestContainer.Restaurantes.ToList();
+        }
+
     }
 }

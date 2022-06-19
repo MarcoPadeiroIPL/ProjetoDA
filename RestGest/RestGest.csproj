@@ -64,6 +64,24 @@
     <Compile Include="Estado.cs">
       <DependentUpon>RestGest.tt</DependentUpon>
     </Compile>
+    <Compile Include="FormAddCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddCategoria.Designer.cs">
+      <DependentUpon>FormAddCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddMetodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddMetodo.Designer.cs">
+      <DependentUpon>FormAddMetodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddRestaurante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddRestaurante.Designer.cs">
+      <DependentUpon>FormAddRestaurante.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioGestaoClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +159,15 @@
     <Compile Include="Trabalhador.cs">
       <DependentUpon>RestGest.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormAddCategoria.resx">
+      <DependentUpon>FormAddCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddMetodo.resx">
+      <DependentUpon>FormAddMetodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddRestaurante.resx">
+      <DependentUpon>FormAddRestaurante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioGestaoClientes.resx">
       <DependentUpon>FormularioGestaoClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioMenu.resx">
       <DependentUpon>FormularioMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioPrincipal.resx">
+      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

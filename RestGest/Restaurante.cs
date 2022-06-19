@@ -32,5 +32,10 @@ namespace WindowsFormsApp1
         public virtual Morada Morada { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ItemMenu> ItemMenus { get; set; }
+
+        public override string ToString()
+        {
+            return this.Id + ". " + this.Nome;
+        }
     }
 }

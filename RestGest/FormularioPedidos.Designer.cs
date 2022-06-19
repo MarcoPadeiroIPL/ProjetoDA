@@ -41,7 +41,7 @@
             // 
             this.listBoxPedidosProgresso.FormattingEnabled = true;
             this.listBoxPedidosProgresso.Location = new System.Drawing.Point(146, 20);
-            this.listBoxPedidosProgresso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxPedidosProgresso.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxPedidosProgresso.Name = "listBoxPedidosProgresso";
             this.listBoxPedidosProgresso.Size = new System.Drawing.Size(162, 238);
             this.listBoxPedidosProgresso.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             this.listBoxPedidosCompletos.FormattingEnabled = true;
             this.listBoxPedidosCompletos.Location = new System.Drawing.Point(350, 20);
-            this.listBoxPedidosCompletos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxPedidosCompletos.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxPedidosCompletos.Name = "listBoxPedidosCompletos";
             this.listBoxPedidosCompletos.Size = new System.Drawing.Size(162, 238);
             this.listBoxPedidosCompletos.TabIndex = 1;
@@ -58,17 +58,18 @@
             // buttonNovoPedido
             // 
             this.buttonNovoPedido.Location = new System.Drawing.Point(9, 139);
-            this.buttonNovoPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonNovoPedido.Margin = new System.Windows.Forms.Padding(2);
             this.buttonNovoPedido.Name = "buttonNovoPedido";
             this.buttonNovoPedido.Size = new System.Drawing.Size(122, 19);
             this.buttonNovoPedido.TabIndex = 2;
             this.buttonNovoPedido.Text = "Novo Pedido";
             this.buttonNovoPedido.UseVisualStyleBackColor = true;
+            this.buttonNovoPedido.Click += new System.EventHandler(this.buttonNovoPedido_Click);
             // 
             // buttonAdicionarPagamento
             // 
             this.buttonAdicionarPagamento.Location = new System.Drawing.Point(157, 265);
-            this.buttonAdicionarPagamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAdicionarPagamento.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdicionarPagamento.Name = "buttonAdicionarPagamento";
             this.buttonAdicionarPagamento.Size = new System.Drawing.Size(138, 37);
             this.buttonAdicionarPagamento.TabIndex = 3;
@@ -78,7 +79,7 @@
             // buttonFinalizarPedido
             // 
             this.buttonFinalizarPedido.Location = new System.Drawing.Point(157, 306);
-            this.buttonFinalizarPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonFinalizarPedido.Margin = new System.Windows.Forms.Padding(2);
             this.buttonFinalizarPedido.Name = "buttonFinalizarPedido";
             this.buttonFinalizarPedido.Size = new System.Drawing.Size(138, 37);
             this.buttonFinalizarPedido.TabIndex = 4;
@@ -88,7 +89,7 @@
             // buttonExportar
             // 
             this.buttonExportar.Location = new System.Drawing.Point(364, 306);
-            this.buttonExportar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonExportar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExportar.Name = "buttonExportar";
             this.buttonExportar.Size = new System.Drawing.Size(138, 37);
             this.buttonExportar.TabIndex = 6;
@@ -98,7 +99,7 @@
             // buttonVerMaisDetalhes
             // 
             this.buttonVerMaisDetalhes.Location = new System.Drawing.Point(364, 265);
-            this.buttonVerMaisDetalhes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonVerMaisDetalhes.Margin = new System.Windows.Forms.Padding(2);
             this.buttonVerMaisDetalhes.Name = "buttonVerMaisDetalhes";
             this.buttonVerMaisDetalhes.Size = new System.Drawing.Size(138, 37);
             this.buttonVerMaisDetalhes.TabIndex = 5;
@@ -117,7 +118,7 @@
             this.Controls.Add(this.buttonNovoPedido);
             this.Controls.Add(this.listBoxPedidosCompletos);
             this.Controls.Add(this.listBoxPedidosProgresso);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormularioPedidos";
             this.Text = "Pedidos";
             this.ResumeLayout(false);
