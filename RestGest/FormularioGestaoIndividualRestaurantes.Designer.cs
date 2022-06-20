@@ -38,14 +38,15 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBoxRestaurantes = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.listBoxItensMenu = new System.Windows.Forms.ListBox();
             this.listBoxMenu = new System.Windows.Forms.ListBox();
             this.buttonAdicionarItemMenu = new System.Windows.Forms.Button();
             this.buttonRemoverItemMenu = new System.Windows.Forms.Button();
             this.buttonPedidos = new System.Windows.Forms.Button();
             this.buttonMenu = new System.Windows.Forms.Button();
-            this.listBoxItensMenu = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.buttonConsultar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -53,6 +54,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonConsultar);
             this.groupBox1.Controls.Add(this.buttonPesquisarRestaurantes);
             this.groupBox1.Controls.Add(this.textBoxPesquisarRestaurantes);
             this.groupBox1.Controls.Add(this.listBoxTrabalhadores);
@@ -61,14 +63,14 @@
             this.groupBox1.Controls.Add(this.buttonRemoverTrabalhadores);
             this.groupBox1.Location = new System.Drawing.Point(12, 83);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(284, 418);
+            this.groupBox1.Size = new System.Drawing.Size(366, 418);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Trabalhadores";
             // 
             // buttonPesquisarRestaurantes
             // 
-            this.buttonPesquisarRestaurantes.Location = new System.Drawing.Point(226, 42);
+            this.buttonPesquisarRestaurantes.Location = new System.Drawing.Point(310, 42);
             this.buttonPesquisarRestaurantes.Name = "buttonPesquisarRestaurantes";
             this.buttonPesquisarRestaurantes.Size = new System.Drawing.Size(38, 23);
             this.buttonPesquisarRestaurantes.TabIndex = 13;
@@ -79,7 +81,7 @@
             // 
             this.textBoxPesquisarRestaurantes.Location = new System.Drawing.Point(16, 42);
             this.textBoxPesquisarRestaurantes.Name = "textBoxPesquisarRestaurantes";
-            this.textBoxPesquisarRestaurantes.Size = new System.Drawing.Size(204, 20);
+            this.textBoxPesquisarRestaurantes.Size = new System.Drawing.Size(288, 20);
             this.textBoxPesquisarRestaurantes.TabIndex = 13;
             // 
             // listBoxTrabalhadores
@@ -88,7 +90,7 @@
             this.listBoxTrabalhadores.Location = new System.Drawing.Point(16, 90);
             this.listBoxTrabalhadores.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxTrabalhadores.Name = "listBoxTrabalhadores";
-            this.listBoxTrabalhadores.Size = new System.Drawing.Size(248, 264);
+            this.listBoxTrabalhadores.Size = new System.Drawing.Size(332, 264);
             this.listBoxTrabalhadores.TabIndex = 0;
             // 
             // buttonAdicionarTrabalhadores
@@ -129,7 +131,7 @@
             this.groupBox2.Controls.Add(this.comboBoxRestaurantes);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(820, 53);
+            this.groupBox2.Size = new System.Drawing.Size(932, 53);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Restaurante";
@@ -139,7 +141,7 @@
             this.comboBoxRestaurantes.FormattingEnabled = true;
             this.comboBoxRestaurantes.Location = new System.Drawing.Point(16, 19);
             this.comboBoxRestaurantes.Name = "comboBoxRestaurantes";
-            this.comboBoxRestaurantes.Size = new System.Drawing.Size(790, 21);
+            this.comboBoxRestaurantes.Size = new System.Drawing.Size(902, 21);
             this.comboBoxRestaurantes.TabIndex = 0;
             this.comboBoxRestaurantes.SelectedIndexChanged += new System.EventHandler(this.comboBoxRestaurantes_SelectedIndexChanged);
             // 
@@ -151,12 +153,39 @@
             this.groupBox3.Controls.Add(this.listBoxMenu);
             this.groupBox3.Controls.Add(this.buttonAdicionarItemMenu);
             this.groupBox3.Controls.Add(this.buttonRemoverItemMenu);
-            this.groupBox3.Location = new System.Drawing.Point(302, 83);
+            this.groupBox3.Location = new System.Drawing.Point(414, 83);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(530, 252);
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Menu";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(265, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(174, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Itens menu - Restaurante Individual";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Itens menu - Restaurante Global";
+            // 
+            // listBoxItensMenu
+            // 
+            this.listBoxItensMenu.FormattingEnabled = true;
+            this.listBoxItensMenu.Location = new System.Drawing.Point(16, 51);
+            this.listBoxItensMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.listBoxItensMenu.Name = "listBoxItensMenu";
+            this.listBoxItensMenu.Size = new System.Drawing.Size(248, 147);
+            this.listBoxItensMenu.TabIndex = 10;
             // 
             // listBoxMenu
             // 
@@ -191,7 +220,7 @@
             // 
             // buttonPedidos
             // 
-            this.buttonPedidos.Location = new System.Drawing.Point(358, 389);
+            this.buttonPedidos.Location = new System.Drawing.Point(508, 389);
             this.buttonPedidos.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPedidos.Name = "buttonPedidos";
             this.buttonPedidos.Size = new System.Drawing.Size(170, 97);
@@ -202,7 +231,7 @@
             // 
             // buttonMenu
             // 
-            this.buttonMenu.Location = new System.Drawing.Point(606, 389);
+            this.buttonMenu.Location = new System.Drawing.Point(760, 389);
             this.buttonMenu.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMenu.Name = "buttonMenu";
             this.buttonMenu.Size = new System.Drawing.Size(170, 97);
@@ -211,38 +240,22 @@
             this.buttonMenu.UseVisualStyleBackColor = true;
             this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
             // 
-            // listBoxItensMenu
+            // buttonConsultar
             // 
-            this.listBoxItensMenu.FormattingEnabled = true;
-            this.listBoxItensMenu.Location = new System.Drawing.Point(16, 51);
-            this.listBoxItensMenu.Margin = new System.Windows.Forms.Padding(2);
-            this.listBoxItensMenu.Name = "listBoxItensMenu";
-            this.listBoxItensMenu.Size = new System.Drawing.Size(248, 147);
-            this.listBoxItensMenu.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Itens menu - Restaurante Global";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(265, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Itens menu - Restaurante Individual";
+            this.buttonConsultar.Location = new System.Drawing.Point(268, 367);
+            this.buttonConsultar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonConsultar.Name = "buttonConsultar";
+            this.buttonConsultar.Size = new System.Drawing.Size(80, 36);
+            this.buttonConsultar.TabIndex = 14;
+            this.buttonConsultar.Text = "Consultar";
+            this.buttonConsultar.UseVisualStyleBackColor = true;
+            this.buttonConsultar.Click += new System.EventHandler(this.buttonConsultar_Click);
             // 
             // FormularioGestaoIndividualRestaurantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 513);
+            this.ClientSize = new System.Drawing.Size(956, 513);
             this.Controls.Add(this.buttonMenu);
             this.Controls.Add(this.buttonPedidos);
             this.Controls.Add(this.groupBox3);
@@ -282,5 +295,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBoxItensMenu;
+        private System.Windows.Forms.Button buttonConsultar;
     }
 }

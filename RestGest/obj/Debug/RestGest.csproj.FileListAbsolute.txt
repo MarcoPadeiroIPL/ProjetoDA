@@ -63,3 +63,4 @@ C:\Users\Marco\Desktop\Escola\DA\RestGest\ProjetoDA\RestGest\obj\Debug\WindowsFo
 C:\Users\Marco\Desktop\Escola\DA\RestGest\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddMetodo.resources
 C:\Users\Marco\Desktop\Escola\DA\RestGest\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddClientes.resources
 C:\Users\Marco\Desktop\Escola\DA\RestGest\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddTrabalhadores.resources
+C:\Users\Marco\Desktop\Escola\DA\RestGest\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddPedido.resources

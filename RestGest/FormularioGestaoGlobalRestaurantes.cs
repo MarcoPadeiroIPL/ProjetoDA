@@ -203,5 +203,55 @@ namespace WindowsFormsApp1
         {
             restGestContainer.Dispose();
         }
+
+        private void buttonPesquisarRestaurantes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonConsultarRestaurantes_Click(object sender, EventArgs e)
+        {
+            Restaurante restauranteSelecionado = listBoxRestaurantes.SelectedItem as Restaurante;
+            if (restauranteSelecionado == null)
+            {
+                MessageBox.Show("Precisa de selecionar um restaurante!");
+                return;
+            }
+
+            using (FormAddRestaurante formAddRestaurante = new FormAddRestaurante(restauranteSelecionado.Nome, restauranteSelecionado.Morada, true))
+            {
+                formAddRestaurante.ShowDialog();
+            }
+        }
+
+        private void buttonConsultarCategorias_Click(object sender, EventArgs e)
+        {
+            Categoria categoriaSelecionada = listBoxCategorias.SelectedItem as Categoria;
+            if (categoriaSelecionada == null)
+            {
+                MessageBox.Show("Precisa de selecionar uma categoria!");
+                return;
+            }
+
+            using (FormAddCategoria formAddCategoria = new FormAddCategoria(categoriaSelecionada.Nome, categoriaSelecionada.Ativo, true))
+            {
+                formAddCategoria.ShowDialog();
+            }
+        }
+
+        private void buttonConsultarMetodos_Click(object sender, EventArgs e)
+        {
+            MetodoPagamento metodoSelecionado = listBoxMetodosPagamento.SelectedItem as MetodoPagamento;
+            if (metodoSelecionado == null)
+            {
+                MessageBox.Show("Precisa de selecionar um metodo!");
+                return;
+            }
+
+            using (FormAddMetodo formAddMetodo = new FormAddMetodo(metodoSelecionado.Metodo, metodoSelecionado.Ativo, true))
+            {
+                formAddMetodo.ShowDialog();
+            }
+        }
     }
 }

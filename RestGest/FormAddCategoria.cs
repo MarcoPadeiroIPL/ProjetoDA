@@ -15,26 +15,31 @@ namespace WindowsFormsApp1
         public string nome { get; set; }
         public bool ativo { get; set; }
 
+        private bool consultar;
 
-        public FormAddCategoria(string nome = null, bool ativo = true)
+        public FormAddCategoria(string nome = null, bool ativo = true, bool consultar = false)
         {
             InitializeComponent();
             this.nome = nome;
             this.ativo = ativo;
+            this.consultar = consultar;
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(textBoxNome.Text.Trim()))
+            if (!consultar)
             {
-                MessageBox.Show("Tem de preencher todos os campos!");
-                return;
-            }
+                if (String.IsNullOrEmpty(textBoxNome.Text.Trim()))
+                {
+                    MessageBox.Show("Tem de preencher todos os campos!");
+                    return;
+                }
 
-            this.nome = textBoxNome.Text.Trim();
-            this.ativo = radioButtonSim.Checked;
-            this.DialogResult = DialogResult.OK;
-            MessageBox.Show("Categoria inserido com sucesso!");
+                this.nome = textBoxNome.Text.Trim();
+                this.ativo = radioButtonSim.Checked;
+                this.DialogResult = DialogResult.OK;
+                MessageBox.Show("Categoria inserido com sucesso!");
+            }
             this.Close();
         }
 
@@ -45,6 +50,13 @@ namespace WindowsFormsApp1
 
         private void FormAddCategoria_Load(object sender, EventArgs e)
         {
+            if (consultar)
+            {
+                textBoxNome.Enabled = false;
+                radioButtonSim.Enabled = false;
+                radioButtonNao.Enabled = false;
+
+            }
             if (this.nome != null)
             {
                 textBoxNome.Text = this.nome;

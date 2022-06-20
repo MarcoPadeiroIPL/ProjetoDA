@@ -82,6 +82,18 @@
     <Compile Include="FormAddMetodo.Designer.cs">
       <DependentUpon>FormAddMetodo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddPagamento.Designer.cs">
+      <DependentUpon>FormAddPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddPedido.Designer.cs">
+      <DependentUpon>FormAddPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddRestaurante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddMetodo.resx">
       <DependentUpon>FormAddMetodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddPedido.resx">
+      <DependentUpon>FormAddPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddRestaurante.resx">
       <DependentUpon>FormAddRestaurante.cs</DependentUpon>

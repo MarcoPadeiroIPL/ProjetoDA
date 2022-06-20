@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
                         Trabalhador novoTrabalhador = new Trabalhador();
                         novoTrabalhador.Nome = formAddTrabalhadores.nome;
                         novoTrabalhador.Morada = formAddTrabalhadores.morada;
-                        novoTrabalhador.RestauranteId = formAddTrabalhadores.restaurante.Id;
+                        novoTrabalhador.RestauranteId = formAddTrabalhadores.restauranteID;
                         novoTrabalhador.Salario = formAddTrabalhadores.salario;
                         novoTrabalhador.Posicao = formAddTrabalhadores.posicao;
                         novoTrabalhador.Telemovel = formAddTrabalhadores.telemovel;
@@ -74,7 +74,7 @@ namespace WindowsFormsApp1
                 return;
             }
 
-            using (FormAddTrabalhadores formAddTrabalhadores = new FormAddTrabalhadores(trabalhadorSelecionado.Nome, trabalhadorSelecionado.Morada, trabalhadorSelecionado.Telemovel, trabalhadorSelecionado.Posicao, trabalhadorSelecionado.Salario, trabalhadorSelecionado.Restaurante))
+            using (FormAddTrabalhadores formAddTrabalhadores = new FormAddTrabalhadores(trabalhadorSelecionado.Nome, trabalhadorSelecionado.Morada, trabalhadorSelecionado.Telemovel, trabalhadorSelecionado.Posicao, trabalhadorSelecionado.Salario, comboBoxRestaurantes.SelectedIndex))
             {
                 var result = formAddTrabalhadores.ShowDialog();
                 if (result == DialogResult.OK)
@@ -85,7 +85,7 @@ namespace WindowsFormsApp1
                         {
                             trabalhador.Nome = formAddTrabalhadores.nome;
                             trabalhador.Morada = formAddTrabalhadores.morada;
-                            trabalhador.RestauranteId = formAddTrabalhadores.restaurante.Id;
+                            trabalhador.RestauranteId = formAddTrabalhadores.restauranteID;
                             trabalhador.Salario = formAddTrabalhadores.salario;
                             trabalhador.Posicao = formAddTrabalhadores.posicao;
                             trabalhador.Telemovel = formAddTrabalhadores.telemovel;
@@ -131,11 +131,13 @@ namespace WindowsFormsApp1
         }
         private void buttonPedidos_Click(object sender, EventArgs e)
         {
-
+            FormularioPedidos formPedidos = new FormularioPedidos();
+            formPedidos.ShowDialog();
         }
         private void buttonMenu_Click(object sender, EventArgs e)
         {
-
+            FormularioMenu formMenu = new FormularioMenu();
+            formMenu.ShowDialog();
         }
 
         private void FormularioGestaoIndividualRestaurantes_Load(object sender, EventArgs e)
@@ -161,6 +163,22 @@ namespace WindowsFormsApp1
                                                    select trabalhador;
                 listBoxTrabalhadores.DataSource = trabalhadoresFromRestaurante.ToList();
                 listBoxMenu.DataSource = restauranteSelecionado.ItemMenus.ToList();
+            }
+        }
+
+        private void buttonConsultar_Click(object sender, EventArgs e)
+        {
+            Trabalhador trabalhadorSelecionado = listBoxTrabalhadores.SelectedItem as Trabalhador;
+            if (trabalhadorSelecionado == null)
+            {
+                MessageBox.Show("Precisa de selecionar um cliente!");
+                return;
+            }
+
+            using (FormAddTrabalhadores formAddTrabalhadores = new FormAddTrabalhadores(trabalhadorSelecionado.Nome, trabalhadorSelecionado.Morada, trabalhadorSelecionado.Telemovel, trabalhadorSelecionado.Posicao, trabalhadorSelecionado.Salario, comboBoxRestaurantes.SelectedIndex, true))
+            {
+                formAddTrabalhadores.ShowDialog();
+                
             }
         }
     }

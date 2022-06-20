@@ -15,11 +15,12 @@ namespace WindowsFormsApp1
         public string nome { get; set; }
         public string telemovel { get; set; }
         public Morada morada { get; set; }
-        public Restaurante restaurante { get; set; }
+        public int restauranteID { get; set; }
         public decimal salario { get; set; }
         public string posicao { get; set; }
+        public bool consultar; 
         public static RestGestContainer restGestContainer;
-        public FormAddTrabalhadores(string nome = null, Morada morada = null, string telemovel = null, string posicao = null, decimal salario = 0, Restaurante restaurante = null)
+        public FormAddTrabalhadores(string nome = null, Morada morada = null, string telemovel = null, string posicao = null, decimal salario = 0, int restauranteID = 0, bool consultar = false)
         {
             InitializeComponent();
             this.nome = nome;
@@ -27,31 +28,36 @@ namespace WindowsFormsApp1
             this.morada = morada;
             this.posicao = posicao;
             this.salario = salario;
-            this.restaurante = restaurante;
+            this.restauranteID = restauranteID;
+            this.consultar = consultar;
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(textBoxNome.Text.Trim()) || String.IsNullOrEmpty(textBoxCidade.Text.Trim()) || String.IsNullOrEmpty(textBoxRua.Text.Trim()) || String.IsNullOrEmpty(textBoxPais.Text.Trim()) || String.IsNullOrEmpty(textBoxCodPostal.Text.Trim()) || String.IsNullOrEmpty(textBoxTelemovel.Text.Trim()) || String.IsNullOrEmpty(textBoxSalario.Text.Trim()) || String.IsNullOrEmpty(textBoxPosicao.Text.Trim()))
+            if (!consultar)
             {
-                MessageBox.Show("Tem de preencher todos os campos!");
-                return;
+                if (String.IsNullOrEmpty(textBoxNome.Text.Trim()) || String.IsNullOrEmpty(textBoxCidade.Text.Trim()) || String.IsNullOrEmpty(textBoxRua.Text.Trim()) || String.IsNullOrEmpty(textBoxPais.Text.Trim()) || String.IsNullOrEmpty(textBoxCodPostal.Text.Trim()) || String.IsNullOrEmpty(textBoxTelemovel.Text.Trim()) || String.IsNullOrEmpty(textBoxSalario.Text.Trim()) || String.IsNullOrEmpty(textBoxPosicao.Text.Trim()))
+                {
+                    MessageBox.Show("Tem de preencher todos os campos!");
+                    return;
+                }
+
+                Morada novaMorada = new Morada();
+                novaMorada.Cidade = textBoxCidade.Text.Trim();
+                novaMorada.Pais = textBoxPais.Text.Trim();
+                novaMorada.CodPostal = textBoxCodPostal.Text.Trim();
+                novaMorada.Rua = textBoxRua.Text.Trim();
+
+                this.nome = textBoxNome.Text.Trim();
+                this.telemovel = textBoxTelemovel.Text.Trim();
+                this.posicao = textBoxPosicao.Text.Trim();
+                this.restauranteID = (comboBoxRestaurante.SelectedItem as Restaurante).Id;
+                this.salario = Convert.ToDecimal(textBoxSalario.Text);
+                this.morada = novaMorada;
+                this.DialogResult = DialogResult.OK;
+                MessageBox.Show("Trabalhador inserido com sucesso!");
             }
-
-            Morada novaMorada = new Morada();
-            novaMorada.Cidade = textBoxCidade.Text.Trim();
-            novaMorada.Pais = textBoxPais.Text.Trim();
-            novaMorada.CodPostal = textBoxCodPostal.Text.Trim();
-            novaMorada.Rua = textBoxRua.Text.Trim();
-
-            this.nome = textBoxNome.Text.Trim();
-            this.telemovel = textBoxTelemovel.Text.Trim();
-            this.posicao = textBoxPosicao.Text.Trim();
-            this.restaurante = comboBoxRestaurante.SelectedItem as Restaurante;
-            this.salario = Convert.ToDecimal(textBoxSalario.Text);
-            this.morada = novaMorada;
-            this.DialogResult = DialogResult.OK;
-            MessageBox.Show("Trabalhador inserido com sucesso!");
+            
             this.Close();
         }
 
@@ -62,6 +68,18 @@ namespace WindowsFormsApp1
 
         private void FormAddTrabalhadores_Load(object sender, EventArgs e)
         {
+            if (consultar)
+            {
+                textBoxNome.Enabled = false;
+                textBoxRua.Enabled = false;
+                textBoxCidade.Enabled = false;
+                textBoxCodPostal.Enabled = false;
+                textBoxPais.Enabled = false;
+                comboBoxRestaurante.Enabled = false;
+                textBoxTelemovel.Enabled = false;
+                textBoxSalario.Enabled = false;
+                textBoxPosicao.Enabled = false;
+            }
             restGestContainer = new RestGestContainer();
             comboBoxRestaurante.DataSource = restGestContainer.Restaurantes.ToList();
 
@@ -88,6 +106,11 @@ namespace WindowsFormsApp1
             {
                 textBoxPosicao.Text = this.posicao;
             }
+            if (this.restauranteID != 0)
+            {
+                comboBoxRestaurante.SelectedIndex = this.restauranteID;
+            }
+            
         }
     }
 }

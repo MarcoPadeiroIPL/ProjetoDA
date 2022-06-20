@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
 
         private void listBoxRestaurantes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Restaurante restauranteSelecionado = (Restaurante)listBoxRestaurantes.SelectedItem;
+            Restaurante restauranteSelecionado = (Restaurante)listBoxMenus.SelectedItem;
             foreach(ItemMenu itemMenu in restauranteSelecionado.ItemMenus)
             {
                 listBoxMenus.Items.Add(itemMenu);
@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
         }
         private void LerDados()
         {
-            listBoxRestaurantes.DataSource = restGestContainer.Restaurantes.ToList();
+            listBoxMenus.DataSource = restGestContainer.Restaurantes.ToList();
         }
 
     }
