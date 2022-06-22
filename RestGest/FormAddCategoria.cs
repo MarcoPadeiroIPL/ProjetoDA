@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         {
             if (!consultar)
             {
+                //validações 
                 if (String.IsNullOrEmpty(textBoxNome.Text.Trim()))
                 {
                     MessageBox.Show("Tem de preencher todos os campos!");

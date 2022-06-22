@@ -257,6 +257,9 @@
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonOK);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(330, 469);
+            this.MinimumSize = new System.Drawing.Size(330, 469);
             this.Name = "FormAddTrabalhadores";
             this.Text = "FormAddTrabalhadores";
             this.Load += new System.EventHandler(this.FormAddTrabalhadores_Load);

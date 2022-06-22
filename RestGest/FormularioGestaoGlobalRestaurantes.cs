@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
 
         private void buttonAdicionarRestaurante_Click(object sender, EventArgs e)
         {
+            //abre o form para adicionar um restaurante e adiciona os dados que foram lá inseridos
             using (FormAddRestaurante formAddRestaurante = new FormAddRestaurante())
             {
                 var result = formAddRestaurante.ShowDialog();
@@ -41,6 +42,7 @@ namespace WindowsFormsApp1
 
         private void buttonRemoverRestaurante_Click(object sender, EventArgs e)
         {
+            //apaga o restaurante selecionado
             Restaurante restauranteSelecionado = listBoxRestaurantes.SelectedItem as Restaurante;
             if (restauranteSelecionado == null)
             {
@@ -54,13 +56,14 @@ namespace WindowsFormsApp1
 
         private void buttonEditarRestaurante_Click(object sender, EventArgs e)
         {
+            //edita os dados do restaurante selecionado
             Restaurante restauranteSelecionado = listBoxRestaurantes.SelectedItem as Restaurante;
             if(restauranteSelecionado == null)
             {
                 MessageBox.Show("Precisa de selecionar um restaurante!");
                 return;
             }
-
+            //abre o form de adicionar um restaurante e atualiza o restaurante com os dados lá inseridos
             using (FormAddRestaurante formAddRestaurante = new FormAddRestaurante(restauranteSelecionado.Nome, restauranteSelecionado.Morada))
             {
                 var result = formAddRestaurante.ShowDialog();
@@ -77,6 +80,7 @@ namespace WindowsFormsApp1
 
         private void buttonAdicionarCategoria_Click(object sender, EventArgs e)
         {
+            //abre o formulario de adicionar categorias e adiciona os dados que foram lá inseridos
             using (FormAddCategoria formAddCategoria = new FormAddCategoria())
             {
                 var result = formAddCategoria.ShowDialog();
@@ -97,6 +101,7 @@ namespace WindowsFormsApp1
 
         private void buttonRemoverCategoria_Click(object sender, EventArgs e)
         {
+            //apaga a categoria selecionada
             Categoria categoriaSelecionada = listBoxCategorias.SelectedItem as Categoria;
             if (categoriaSelecionada == null)
             {
@@ -110,13 +115,14 @@ namespace WindowsFormsApp1
 
         private void buttonEditarCategoria_Click(object sender, EventArgs e)
         {
+            //edita os dados da categoria selecionada
             Categoria categoriaSelecionada = listBoxCategorias.SelectedItem as Categoria;
             if (categoriaSelecionada == null)
             {
                 MessageBox.Show("Precisa de selecionar uma categoria!");
                 return;
             }
-
+            //abre o form de adicionar categorias e a atualiza os dados com os que lá foram inseridos
             using (FormAddCategoria formAddCategoria = new FormAddCategoria(categoriaSelecionada.Nome, categoriaSelecionada.Ativo))
             {
                 var result = formAddCategoria.ShowDialog();
@@ -133,6 +139,7 @@ namespace WindowsFormsApp1
 
         private void buttonAdicionarMetodo_Click(object sender, EventArgs e)
         {
+            //abre o formulario de adicionar um metodo de pagamento e adiciona os dados que lá foram inseridos
             using (FormAddMetodo formAddMetodo = new FormAddMetodo())
             {
                 var result = formAddMetodo.ShowDialog();
@@ -153,6 +160,7 @@ namespace WindowsFormsApp1
 
         private void buttonRemoverMetodo_Click(object sender, EventArgs e)
         {
+            //apaga o metodo de pagamento selecionado
             MetodoPagamento metodoSelecionado = listBoxMetodosPagamento.SelectedItem as MetodoPagamento;
             if (metodoSelecionado == null)
             {
@@ -166,13 +174,14 @@ namespace WindowsFormsApp1
 
         private void buttonEditarMetodo_Click(object sender, EventArgs e)
         {
+            //edita os dados do metodo de pagamento selecionado
             MetodoPagamento metodoSelecionado = listBoxMetodosPagamento.SelectedItem as MetodoPagamento;
             if (metodoSelecionado == null)
             {
                 MessageBox.Show("Precisa de selecionar um metodo!");
                 return;
             }
-
+            //abre o formulario de adicionar um metodo de pagamento e atualiza os dados com os que lá foram inseridos
             using (FormAddMetodo formAddMetodo = new FormAddMetodo(metodoSelecionado.Metodo, metodoSelecionado.Ativo))
             {
                 var result = formAddMetodo.ShowDialog();
@@ -204,13 +213,10 @@ namespace WindowsFormsApp1
             restGestContainer.Dispose();
         }
 
-        private void buttonPesquisarRestaurantes_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonConsultarRestaurantes_Click(object sender, EventArgs e)
         {
+            //apresenta os dados do restaurante selecionado
             Restaurante restauranteSelecionado = listBoxRestaurantes.SelectedItem as Restaurante;
             if (restauranteSelecionado == null)
             {
@@ -226,6 +232,7 @@ namespace WindowsFormsApp1
 
         private void buttonConsultarCategorias_Click(object sender, EventArgs e)
         {
+            //apresenta os dados da categoria selecionada
             Categoria categoriaSelecionada = listBoxCategorias.SelectedItem as Categoria;
             if (categoriaSelecionada == null)
             {
@@ -241,6 +248,7 @@ namespace WindowsFormsApp1
 
         private void buttonConsultarMetodos_Click(object sender, EventArgs e)
         {
+            //apresenta os dados do metodo de pagamento selecionado
             MetodoPagamento metodoSelecionado = listBoxMetodosPagamento.SelectedItem as MetodoPagamento;
             if (metodoSelecionado == null)
             {

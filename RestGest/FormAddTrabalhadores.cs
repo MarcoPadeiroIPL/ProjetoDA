@@ -36,6 +36,7 @@ namespace WindowsFormsApp1
         {
             if (!consultar)
             {
+                //validações
                 if (String.IsNullOrEmpty(textBoxNome.Text.Trim()) || String.IsNullOrEmpty(textBoxCidade.Text.Trim()) || String.IsNullOrEmpty(textBoxRua.Text.Trim()) || String.IsNullOrEmpty(textBoxPais.Text.Trim()) || String.IsNullOrEmpty(textBoxCodPostal.Text.Trim()) || String.IsNullOrEmpty(textBoxTelemovel.Text.Trim()) || String.IsNullOrEmpty(textBoxSalario.Text.Trim()) || String.IsNullOrEmpty(textBoxPosicao.Text.Trim()))
                 {
                     MessageBox.Show("Tem de preencher todos os campos!");
@@ -88,6 +89,7 @@ namespace WindowsFormsApp1
                         }
                     }
                 }
+                //os dados que foram inseridos nas textBox são guardados
                 Morada novaMorada = new Morada();
                 novaMorada.Cidade = textBoxCidade.Text.Trim();
                 novaMorada.Pais = textBoxPais.Text.Trim();
@@ -114,6 +116,7 @@ namespace WindowsFormsApp1
 
         private void FormAddTrabalhadores_Load(object sender, EventArgs e)
         {
+            //quando é aberto apenas para consulta dá disable nas textBox
             if (consultar)
             {
                 textBoxNome.Enabled = false;

@@ -122,6 +122,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxMetodoPagamento);
             this.Controls.Add(this.label);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(238, 218);
+            this.MinimumSize = new System.Drawing.Size(238, 218);
             this.Name = "FormAddPagamento";
             this.Text = "FormAddPagamento";
             this.Load += new System.EventHandler(this.FormAddPagamento_Load);

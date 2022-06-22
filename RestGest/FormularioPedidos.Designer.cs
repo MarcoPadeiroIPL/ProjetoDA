@@ -49,6 +49,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.labelValorPorPagar = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonConsultar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBoxItensMenu.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -68,6 +69,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonConsultar);
             this.groupBox1.Controls.Add(this.listBoxPedidosCompletos);
             this.groupBox1.Controls.Add(this.buttonExportar);
             this.groupBox1.Location = new System.Drawing.Point(740, 12);
@@ -89,7 +91,7 @@
             // 
             // buttonExportar
             // 
-            this.buttonExportar.Location = new System.Drawing.Point(96, 367);
+            this.buttonExportar.Location = new System.Drawing.Point(159, 367);
             this.buttonExportar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExportar.Name = "buttonExportar";
             this.buttonExportar.Size = new System.Drawing.Size(80, 36);
@@ -278,6 +280,17 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pagamentos";
             // 
+            // buttonConsultar
+            // 
+            this.buttonConsultar.Location = new System.Drawing.Point(55, 367);
+            this.buttonConsultar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonConsultar.Name = "buttonConsultar";
+            this.buttonConsultar.Size = new System.Drawing.Size(80, 36);
+            this.buttonConsultar.TabIndex = 7;
+            this.buttonConsultar.Text = "Consultar";
+            this.buttonConsultar.UseVisualStyleBackColor = true;
+            this.buttonConsultar.Click += new System.EventHandler(this.buttonConsultar_Click);
+            // 
             // FormularioPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +302,9 @@
             this.Controls.Add(this.groupBoxItensMenu);
             this.Controls.Add(this.buttonCriarNovoPedido);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1049, 475);
+            this.MinimumSize = new System.Drawing.Size(1049, 475);
             this.Name = "FormularioPedidos";
             this.Text = "Pedidos";
             this.Load += new System.EventHandler(this.FormularioPedidos_Load);
@@ -323,5 +339,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelValorPorPagar;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button buttonConsultar;
     }
 }

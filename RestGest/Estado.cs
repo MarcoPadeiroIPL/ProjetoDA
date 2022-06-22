@@ -18,6 +18,7 @@ namespace WindowsFormsApp1
         public Estado()
         {
             this.Pedidos = new HashSet<Pedido>();
+            
         }
     
         public int Id { get; set; }

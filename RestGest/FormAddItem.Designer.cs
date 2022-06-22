@@ -212,6 +212,9 @@
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonOK);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(461, 303);
+            this.MinimumSize = new System.Drawing.Size(461, 303);
             this.Name = "FormAddItem";
             this.Text = "FormAddItem";
             this.Load += new System.EventHandler(this.FormAddItem_Load);

@@ -26,40 +26,44 @@ namespace WindowsFormsApp1
         }
         private void buttonAdicionarTrabalhadores_Click(object sender, EventArgs e)
         {
+            //adicionar um trabalhador ao restaurante selecionado na combobox em cima
             Restaurante restauranteSelecionado = comboBoxRestaurantes.SelectedItem as Restaurante;
 
-            if(restauranteSelecionado != null)
+            if(restauranteSelecionado == null)
             {
-                using (FormAddTrabalhadores formAddTrabalhadores = new FormAddTrabalhadores())
+                MessageBox.Show("Tem de selecionar um restaurante");
+                return;
+            }
+            using (FormAddTrabalhadores formAddTrabalhadores = new FormAddTrabalhadores())
+            {
+                var result = formAddTrabalhadores.ShowDialog();
+                if (result == DialogResult.OK)
                 {
-                    var result = formAddTrabalhadores.ShowDialog();
-                    if (result == DialogResult.OK)
-                    {
-                        Trabalhador novoTrabalhador = new Trabalhador();
-                        novoTrabalhador.Nome = formAddTrabalhadores.nome;
-                        novoTrabalhador.Morada = formAddTrabalhadores.morada;
-                        novoTrabalhador.RestauranteId = formAddTrabalhadores.restauranteID;
-                        novoTrabalhador.Salario = formAddTrabalhadores.salario;
-                        novoTrabalhador.Posicao = formAddTrabalhadores.posicao;
-                        novoTrabalhador.Telemovel = formAddTrabalhadores.telemovel;
+                    Trabalhador novoTrabalhador = new Trabalhador();
+                    novoTrabalhador.Nome = formAddTrabalhadores.nome;
+                    novoTrabalhador.Morada = formAddTrabalhadores.morada;
+                    novoTrabalhador.RestauranteId = formAddTrabalhadores.restauranteID;
+                    novoTrabalhador.Salario = formAddTrabalhadores.salario;
+                    novoTrabalhador.Posicao = formAddTrabalhadores.posicao;
+                    novoTrabalhador.Telemovel = formAddTrabalhadores.telemovel;
 
 
 
-                        restGestContainer.Pessoas.Add(novoTrabalhador);
+                    restGestContainer.Pessoas.Add(novoTrabalhador);
 
-                        restGestContainer.SaveChanges();
-                        LerDados();
-                    }
+                    restGestContainer.SaveChanges();
+                    LerDados();
                 }
             }
         }
 
         private void buttonRemoverTrabalhadores_Click(object sender, EventArgs e)
         {
+            //remove o trabalhador selecionado
             Trabalhador trabalhadorSelecionado = listBoxTrabalhadores.SelectedItem as Trabalhador;
             if (trabalhadorSelecionado == null)
             {
-                MessageBox.Show("Precisa de selecionar um cliente!");
+                MessageBox.Show("Precisa de selecionar um trabalhador!");
                 return;
             }
             restGestContainer.Pessoas.Remove(trabalhadorSelecionado);
@@ -69,13 +73,13 @@ namespace WindowsFormsApp1
 
         private void buttonEditarTrabalhadores_Click(object sender, EventArgs e)
         {
+            //edita os dados do trabalhador selecionado
             Trabalhador trabalhadorSelecionado = listBoxTrabalhadores.SelectedItem as Trabalhador;
             if (trabalhadorSelecionado == null)
             {
-                MessageBox.Show("Precisa de selecionar um cliente!");
+                MessageBox.Show("Precisa de selecionar um trabalhador!");
                 return;
             }
-
             using (FormAddTrabalhadores formAddTrabalhadores = new FormAddTrabalhadores(trabalhadorSelecionado.Nome, trabalhadorSelecionado.Morada, trabalhadorSelecionado.Telemovel, trabalhadorSelecionado.Posicao, trabalhadorSelecionado.Salario, comboBoxRestaurantes.SelectedIndex))
             {
                 var result = formAddTrabalhadores.ShowDialog();
@@ -103,47 +107,67 @@ namespace WindowsFormsApp1
 
         private void buttonAdicionarItemMenu_Click(object sender, EventArgs e)
         {
+            //adiciona o item selecionado ao restaurante selecionado na combobox em cima
             Restaurante restauranteSelecionado = comboBoxRestaurantes.SelectedItem as Restaurante;
             ItemMenu itemSelecionado = listBoxItensMenu.SelectedItem as ItemMenu;
-
-            if(restauranteSelecionado != null)
+            if (restauranteSelecionado == null)
             {
-                if (itemSelecionado != null)
-                {
+                MessageBox.Show("Tem de selecionar um restaurante");
+                return;
+            }
+            if (itemSelecionado == null)
+            {
+                MessageBox.Show("Tem de selecionar um item");
+                return;
+            }
+           
                     restauranteSelecionado.ItemMenus.Add(itemSelecionado);
                     restGestContainer.SaveChanges();
                     LerDados();
-                }
-            }
+             
         }
 
         private void buttonRemoverItemMenu_Click(object sender, EventArgs e)
         {
+            //remove o item selecionado ao restaurante selecionado na combobox em cima
             Restaurante restauranteSelecionado = comboBoxRestaurantes.SelectedItem as Restaurante;
             ItemMenu itemSelecionado = listBoxMenu.SelectedItem as ItemMenu;
-            if (restauranteSelecionado != null)
+            if (restauranteSelecionado == null)
             {
-                if (itemSelecionado != null)
-                {
-                    restauranteSelecionado.ItemMenus.Remove(itemSelecionado);
-                    restGestContainer.SaveChanges();
-                    LerDados();
-                }
+                MessageBox.Show("Tem de selecionar um restaurante");
+                return;
             }
+            if (itemSelecionado == null)
+            {
+                MessageBox.Show("Tem de selecionar um item");
+                return;
+            }
+            restauranteSelecionado.ItemMenus.Remove(itemSelecionado);
+            restGestContainer.SaveChanges();
+            LerDados();
         }
         private void buttonPedidos_Click(object sender, EventArgs e)
         {
+            Restaurante restauranteSelecionado = comboBoxRestaurantes.SelectedItem as Restaurante;
+            if (restauranteSelecionado == null)
+            {
+                MessageBox.Show("Tem de selecionar um restaurante");
+                return;
+            }
+            //abre o formulario dos pedidos
             FormularioPedidos formPedidos = new FormularioPedidos(comboBoxRestaurantes.SelectedItem as Restaurante);
             formPedidos.ShowDialog();
         }
         private void buttonMenu_Click(object sender, EventArgs e)
         {
+            //abre o formulario do menu global
             FormularioMenu formMenu = new FormularioMenu();
             formMenu.ShowDialog();
         }
 
         private void FormularioGestaoIndividualRestaurantes_Load(object sender, EventArgs e)
         {
+           
             restGestContainer = new RestGestContainer();
             LerDados();
         }
@@ -156,6 +180,7 @@ namespace WindowsFormsApp1
 
         private void comboBoxRestaurantes_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //apresentar os trabalhores e itens do menu associados ao restaurante que está selecionado na combobox
             var trabalhadores = restGestContainer.Pessoas.OfType<Trabalhador>();
             Restaurante restauranteSelecionado = comboBoxRestaurantes.SelectedItem as Restaurante;
             if(restauranteSelecionado != null)
@@ -172,10 +197,11 @@ namespace WindowsFormsApp1
 
         private void buttonConsultar_Click(object sender, EventArgs e)
         {
+            //apresenta os dados do trabalhador selecionado
             Trabalhador trabalhadorSelecionado = listBoxTrabalhadores.SelectedItem as Trabalhador;
             if (trabalhadorSelecionado == null)
             {
-                MessageBox.Show("Precisa de selecionar um cliente!");
+                MessageBox.Show("Precisa de selecionar um trabalhador!");
                 return;
             }
 
@@ -184,6 +210,11 @@ namespace WindowsFormsApp1
                 formAddTrabalhadores.ShowDialog();
                 
             }
+        }
+
+        private void buttonAtualizar_Click(object sender, EventArgs e)
+        {
+            LerDados();
         }
     }
 }

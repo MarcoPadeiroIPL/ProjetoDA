@@ -116,6 +116,9 @@
             this.Controls.Add(this.label);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.textBoxNome);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(240, 199);
+            this.MinimumSize = new System.Drawing.Size(240, 199);
             this.Name = "FormAddCategoria";
             this.Text = "FormAddCategoria";
             this.Load += new System.EventHandler(this.FormAddCategoria_Load);

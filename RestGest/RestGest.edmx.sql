@@ -225,6 +225,7 @@ GO
 CREATE TABLE [dbo].[ItemMenuPedido] (
     [ItemMenus_Id] int  NOT NULL,
     [Pedidos_Id] int  NOT NULL
+   -- [Quantidade] int NOT NULL
 );
 GO
 

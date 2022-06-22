@@ -27,6 +27,7 @@ namespace WindowsFormsApp1
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
+            //validações
             if (String.IsNullOrEmpty(textBoxNome.Text.Trim()) || String.IsNullOrEmpty(textBoxCidade.Text.Trim()) || String.IsNullOrEmpty(textBoxRua.Text.Trim()) || String.IsNullOrEmpty(textBoxPais.Text.Trim()) || String.IsNullOrEmpty(textBoxCodPostal.Text.Trim()) || String.IsNullOrEmpty(textBoxTelemovel.Text.Trim()) || String.IsNullOrEmpty(textBoxNumContribuinte.Text.Trim()))
             {
                 MessageBox.Show("Tem de preencher todos os campos!");

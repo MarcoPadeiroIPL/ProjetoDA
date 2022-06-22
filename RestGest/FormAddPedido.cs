@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class FormAddPedido : Form
     {
+        private bool consultar;
         public List<Cliente> clientes { get; set; }
         public List<Trabalhador> trabalhadores{ get; set; }
         public List<ItemMenu> todosItensMenu { get; set; }
@@ -21,7 +22,7 @@ namespace WindowsFormsApp1
         public Estado estado { get; set; }
         public List<ItemMenu> itensMenu { get; set; }
         public Restaurante restaurante;
-        public FormAddPedido(List<Cliente> clientes = null, List<Trabalhador> trabalhadores = null, List<ItemMenu> todosItensMenu = null, List<ItemMenu> itensMenu = null, Estado estado = null, Cliente cliente = null, Trabalhador trabalhador = null)
+        public FormAddPedido(List<Cliente> clientes = null, List<Trabalhador> trabalhadores = null, List<ItemMenu> todosItensMenu = null, List<ItemMenu> itensMenu = null, Estado estado = null, bool consultar = false, Cliente cliente = null, Trabalhador trabalhador = null)
         {
             InitializeComponent();
             this.cliente = cliente;
@@ -31,15 +32,26 @@ namespace WindowsFormsApp1
             this.trabalhador = trabalhador;
             this.itensMenu = itensMenu;
             this.estado = estado;
+            this.consultar = consultar;
         }
 
         private void buttonAdicionar_Click(object sender, EventArgs e)
         {
+            //adicionar o item selecionado ao menu
             ItemMenu itemSelecionado = listBoxItensRestaurante.SelectedItem as ItemMenu;
+         
             if(itemSelecionado == null)
             {
                 MessageBox.Show("Tem de selecionar um item do restaurante!");
                 return;
+            }
+            foreach(ItemMenu item in itensMenu)
+            {
+                if(itemSelecionado == item)
+                {
+                    MessageBox.Show("Item já existe no menu!");
+                    return;
+                }
             }
             itensMenu.Add(itemSelecionado);
             LerDados();
@@ -47,6 +59,7 @@ namespace WindowsFormsApp1
 
         private void buttonRemover_Click(object sender, EventArgs e)
         {
+            //remove o item selecionado do pedido
             ItemMenu itemSelecionado = listBoxPedido.SelectedItem as ItemMenu;
             if (itemSelecionado == null)
             {
@@ -59,6 +72,14 @@ namespace WindowsFormsApp1
 
         private void FormAddPedido_Load(object sender, EventArgs e)
         {
+            if (consultar)
+            {
+                buttonAdicionar.Enabled = false;
+                buttonRemover.Enabled = false;
+                buttonGuardar.Enabled = false;
+                comboBoxCliente.Enabled = false;
+                comboBoxTrabalhador.Enabled = false;
+            }
             LerDados();
             comboBoxCliente.DataSource = clientes;
             comboBoxTrabalhador.DataSource = trabalhadores;
@@ -92,10 +113,21 @@ namespace WindowsFormsApp1
         {
             this.trabalhador = comboBoxTrabalhador.SelectedItem as Trabalhador;
             this.cliente = comboBoxCliente.SelectedItem as Cliente;
+            if(cliente == null)
+            {
+                MessageBox.Show("Tem de selecionar um cliente!");
+                return;
+            }
+            if (trabalhador == null)
+            {
+                MessageBox.Show("Tem de selecionar um trabalhador!");
+                return;
+            }
+           
             this.DialogResult = DialogResult.OK;
             MessageBox.Show("Pedido criado com sucesso!");
             this.Close();
-    }
+        }
 
-            }
+    }
 }

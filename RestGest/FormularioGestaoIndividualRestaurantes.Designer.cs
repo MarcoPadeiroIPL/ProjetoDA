@@ -37,6 +37,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBoxRestaurantes = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonAtualizar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.listBoxItensMenu = new System.Windows.Forms.ListBox();
@@ -138,6 +139,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.buttonAtualizar);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.listBoxItensMenu);
@@ -150,6 +152,17 @@
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Menu";
+            // 
+            // buttonAtualizar
+            // 
+            this.buttonAtualizar.Location = new System.Drawing.Point(147, 202);
+            this.buttonAtualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAtualizar.Name = "buttonAtualizar";
+            this.buttonAtualizar.Size = new System.Drawing.Size(80, 36);
+            this.buttonAtualizar.TabIndex = 13;
+            this.buttonAtualizar.Text = "Atualizar";
+            this.buttonAtualizar.UseVisualStyleBackColor = true;
+            this.buttonAtualizar.Click += new System.EventHandler(this.buttonAtualizar_Click);
             // 
             // label2
             // 
@@ -189,7 +202,7 @@
             // 
             // buttonAdicionarItemMenu
             // 
-            this.buttonAdicionarItemMenu.Location = new System.Drawing.Point(100, 202);
+            this.buttonAdicionarItemMenu.Location = new System.Drawing.Point(45, 202);
             this.buttonAdicionarItemMenu.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdicionarItemMenu.Name = "buttonAdicionarItemMenu";
             this.buttonAdicionarItemMenu.Size = new System.Drawing.Size(80, 36);
@@ -242,6 +255,9 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(972, 552);
+            this.MinimumSize = new System.Drawing.Size(972, 552);
             this.Name = "FormularioGestaoIndividualRestaurantes";
             this.Text = "Gestão de Restaurante";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormularioGestaoIndividualRestaurantes_FormClosing);
@@ -273,5 +289,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBoxItensMenu;
         private System.Windows.Forms.Button buttonConsultar;
+        private System.Windows.Forms.Button buttonAtualizar;
     }
 }

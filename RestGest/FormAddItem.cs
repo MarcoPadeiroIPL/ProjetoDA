@@ -34,6 +34,7 @@ namespace WindowsFormsApp1
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
+            //validações
             if (String.IsNullOrEmpty(textBoxNome.Text.Trim()) || String.IsNullOrEmpty(textBoxIngredientes.Text.Trim()) || String.IsNullOrEmpty(textBoxPreço.Text.Trim()) || String.IsNullOrEmpty(imagem))
             {
                 MessageBox.Show("Tem de preencher todos os campos!");
@@ -42,6 +43,11 @@ namespace WindowsFormsApp1
             if (!Decimal.TryParse(textBoxPreço.Text, out var n))
             {
                 MessageBox.Show("O preço tem de ser um numero decimal");
+                return;
+            }
+            if(Convert.ToDecimal(textBoxPreço.Text)<=0)
+            {
+                MessageBox.Show("O preço tem de ser superior a 0!");
                 return;
             }
             this.nome = textBoxNome.Text.Trim();
@@ -90,13 +96,13 @@ namespace WindowsFormsApp1
 
         private void buttonAdicionarImagem_Click(object sender, EventArgs e)
         {
-            //To where your opendialog box get starting location. My initial directory location is desktop.
+            //o local onde abre o file dialog.
             openFileDialog1.InitialDirectory = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).ToString()).ToString() + "\\Imagens";
-            //Your opendialog box title name.
+            //o titulo do file dialog.
             openFileDialog1.Title = "Select image to be upload.";
-            //which type image format you want to upload in database. just add them.
+            //os tipos de imagem que se aceita.
             openFileDialog1.Filter = "Image Only(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
-            //FilterIndex property represents the index of the filter currently selected in the file dialog box.
+
             openFileDialog1.FilterIndex = 1;
             try
             {
@@ -113,7 +119,6 @@ namespace WindowsFormsApp1
             }
             catch (Exception ex)
             {
-                //it will give if file is already exits..
                 MessageBox.Show(ex.Message);
             }
         }

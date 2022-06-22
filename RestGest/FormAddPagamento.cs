@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            
+            //validações
             if (String.IsNullOrEmpty(textBoxValor.Text.Trim()) || comboBoxMetodoPagamento.SelectedItem == null)
             {
                 MessageBox.Show("Tem de preencher todos os campos!");
@@ -38,7 +38,11 @@ namespace WindowsFormsApp1
                 MessageBox.Show("O valor tem de ser um numero decimal!");
                 return;
             }
-            
+            if (Convert.ToDecimal(textBoxValor.Text) <= 0)
+            {
+                MessageBox.Show("O valor tem de ser superior a 0!");
+                return;
+            }
 
             this.metodoPagamento = comboBoxMetodoPagamento.SelectedItem as MetodoPagamento;
             this.valor = Convert.ToDecimal(textBoxValor.Text.Trim());

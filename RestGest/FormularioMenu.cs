@@ -19,17 +19,11 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void listBoxRestaurantes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Restaurante restauranteSelecionado = (Restaurante)listBoxMenus.SelectedItem;
-            foreach(ItemMenu itemMenu in restauranteSelecionado.ItemMenus)
-            {
-                listBoxMenus.Items.Add(itemMenu);
-            }
-        }
+       
 
         private void FormularioMenu_Load(object sender, EventArgs e)
         {
+            //carrega o formulario do menu com as categorias que estão ativas
             restGestContainer = new RestGestContainer();
             listBoxCategorias.DataSource = (from categoria in restGestContainer.Categorias.ToList()
                                            where categoria.Ativo == true
@@ -41,11 +35,13 @@ namespace WindowsFormsApp1
             listBoxMenus.DataSource = restGestContainer.ItemMenus.ToList();
         }
 
-        private void buttonAdicionarRestaurante_Click(object sender, EventArgs e)
+        private void buttonAdicionarItem_Click(object sender, EventArgs e)
         {
+            //procura pelas categorias ativas
             var categorias = from categoria in restGestContainer.Categorias.ToList()
                              where categoria.Ativo == true
                              select categoria;
+            //abre o formulario para adicionar um item
             using (FormAddItem formAddItem = new FormAddItem(categorias))
             {
                 var result = formAddItem.ShowDialog();
@@ -65,8 +61,9 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void buttonRemoverRestaurante_Click(object sender, EventArgs e)
+        private void buttonRemoverItem_Click(object sender, EventArgs e)
         {
+            //remover o item selecionado
             ItemMenu itemSelecionado = listBoxMenus.SelectedItem as ItemMenu;
             if (itemSelecionado == null)
             {
@@ -88,8 +85,9 @@ namespace WindowsFormsApp1
             LerDados();
         }
 
-        private void buttonEditarRestaurante_Click(object sender, EventArgs e)
+        private void buttonEditarItem_Click(object sender, EventArgs e)
         {
+            
             var categorias = from categoria in restGestContainer.Categorias.ToList()
                              where categoria.Ativo == true
                              select categoria;
@@ -99,7 +97,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Precisa de selecionar um item!");
                 return;
             }
-
+            //abre o form para adicionar um item e guarda os dados inseridos
             using (FormAddItem formAddItem = new FormAddItem(categorias, itemSelecionado.Nome, itemSelecionado.Ingredientes, itemSelecionado.Categoria, itemSelecionado.Preco, itemSelecionado.Ativo, itemSelecionado.Fotografia))
             {
                 var result = formAddItem.ShowDialog();
@@ -121,6 +119,7 @@ namespace WindowsFormsApp1
 
         private void listBoxMenus_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //atualiza os dados dependendo do item selecionado
             ItemMenu itemSelecionado = listBoxMenus.SelectedItem as ItemMenu;
             if (itemSelecionado == null)
             {
@@ -143,9 +142,8 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
+    
 
-        }
+      
     }
 }

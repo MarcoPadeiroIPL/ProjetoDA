@@ -225,6 +225,8 @@
             this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximumSize = new System.Drawing.Size(482, 602);
+            this.MinimumSize = new System.Drawing.Size(482, 602);
             this.Name = "FormAddPedido";
             this.Text = "FormAddPedido";
             this.Load += new System.EventHandler(this.FormAddPedido_Load);

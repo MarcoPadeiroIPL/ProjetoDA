@@ -116,6 +116,8 @@
             this.Controls.Add(this.label);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.textBoxMetodoPagamento);
+            this.MaximumSize = new System.Drawing.Size(240, 199);
+            this.MinimumSize = new System.Drawing.Size(240, 199);
             this.Name = "FormAddMetodo";
             this.Text = "FormAddMetodo";
             this.Load += new System.EventHandler(this.FormAddMetodo_Load);

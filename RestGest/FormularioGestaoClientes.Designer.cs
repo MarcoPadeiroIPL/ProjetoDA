@@ -288,6 +288,9 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(853, 473);
+            this.MinimumSize = new System.Drawing.Size(853, 473);
             this.Name = "FormularioGestaoClientes";
             this.Text = "Gestão de Clientes";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormularioGestaoClientes_FormClosing);

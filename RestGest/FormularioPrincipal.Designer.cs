@@ -67,12 +67,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 260);
+            this.ClientSize = new System.Drawing.Size(514, 256);
             this.Controls.Add(this.buttonIndividualRestaurantes);
             this.Controls.Add(this.buttonGlobalRestaurantes);
             this.Controls.Add(this.buttonClientes);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(530, 295);
+            this.MinimumSize = new System.Drawing.Size(530, 295);
             this.Name = "FormularioPrincipal";
             this.Text = "FormularioPrincipal";
+            this.Load += new System.EventHandler(this.FormularioPrincipal_Load);
             this.ResumeLayout(false);
 
         }

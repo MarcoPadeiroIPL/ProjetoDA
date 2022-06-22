@@ -159,6 +159,9 @@
             this.Controls.Add(this.label);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.textBoxNome);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(253, 382);
+            this.MinimumSize = new System.Drawing.Size(253, 382);
             this.Name = "FormAddRestaurante";
             this.Text = "FormAddRestaurante";
             this.Load += new System.EventHandler(this.FormAddRestaurante_Load);

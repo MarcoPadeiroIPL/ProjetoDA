@@ -197,7 +197,7 @@
             this.buttonAdicionarItem.TabIndex = 3;
             this.buttonAdicionarItem.Text = "Adicionar";
             this.buttonAdicionarItem.UseVisualStyleBackColor = true;
-            this.buttonAdicionarItem.Click += new System.EventHandler(this.buttonAdicionarRestaurante_Click);
+            this.buttonAdicionarItem.Click += new System.EventHandler(this.buttonAdicionarItem_Click);
             // 
             // buttonEditarItem
             // 
@@ -208,7 +208,7 @@
             this.buttonEditarItem.TabIndex = 6;
             this.buttonEditarItem.Text = "Editar";
             this.buttonEditarItem.UseVisualStyleBackColor = true;
-            this.buttonEditarItem.Click += new System.EventHandler(this.buttonEditarRestaurante_Click);
+            this.buttonEditarItem.Click += new System.EventHandler(this.buttonEditarItem_Click);
             // 
             // buttonRemoverItem
             // 
@@ -219,7 +219,7 @@
             this.buttonRemoverItem.TabIndex = 9;
             this.buttonRemoverItem.Text = "Remover";
             this.buttonRemoverItem.UseVisualStyleBackColor = true;
-            this.buttonRemoverItem.Click += new System.EventHandler(this.buttonRemoverRestaurante_Click);
+            this.buttonRemoverItem.Click += new System.EventHandler(this.buttonRemoverItem_Click);
             // 
             // groupBox1
             // 
@@ -248,6 +248,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxItensMenu);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(930, 382);
+            this.MinimumSize = new System.Drawing.Size(930, 382);
             this.Name = "FormularioMenu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.FormularioMenu_Load);
