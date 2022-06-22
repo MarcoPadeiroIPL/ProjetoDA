@@ -32,17 +32,26 @@ namespace WindowsFormsApp1
 
         private void buttonCriarNovoPedido_Click(object sender, EventArgs e)
         {
-            Pedido novoPedido = new Pedido();
-            novoPedido.Restaurante = restaurante;
-            novoPedido.EstadoId = 1;
-
-
-            using (FormAddPedido formAddPedido = new FormAddPedido(novoPedido))
+            var estado = restGestContainer.Estados.Find(1);
+            using (FormAddPedido formAddPedido = new FormAddPedido(restaurante, new List<ItemMenu>(), estado))
             {
                 var result = formAddPedido.ShowDialog();
                 if (result == DialogResult.OK)
                 {
-                    novoPedido = formAddPedido.pedido;
+                    Pedido novoPedido = new Pedido();
+                    novoPedido.Restaurante = restaurante;
+                    novoPedido.Estado = formAddPedido.estado;
+                    novoPedido.Trabalhador = formAddPedido.trabalhador;
+                    novoPedido.Cliente = formAddPedido.cliente;
+
+                    if(novoPedido.ItemMenus != null)
+                    {
+                        foreach (ItemMenu item in formAddPedido.itensMenu)
+                        {
+                            novoPedido.ItemMenus.Add(item);
+                            novoPedido.ValorTotal += item.Preco;
+                        }
+                    }
 
                     restGestContainer.Pedidos.Add(novoPedido);
 
@@ -117,6 +126,10 @@ namespace WindowsFormsApp1
                 return;
             }
             restGestContainer.Pedidos.Remove(pedidoSelecionado);
+        }
+
+        private void buttonExportar_Click(object sender, EventArgs e)
+        {
         }
     }
 }

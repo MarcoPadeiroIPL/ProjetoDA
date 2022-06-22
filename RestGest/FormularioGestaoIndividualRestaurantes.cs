@@ -20,7 +20,9 @@ namespace WindowsFormsApp1
         private void LerDados()
         {
             comboBoxRestaurantes.DataSource = restGestContainer.Restaurantes.ToList();
-            listBoxItensMenu.DataSource = restGestContainer.ItemMenus.ToList();
+            listBoxItensMenu.DataSource = (from item in restGestContainer.ItemMenus.ToList()
+                                          where item.Ativo == true
+                                          select item).ToList();
         }
         private void buttonAdicionarTrabalhadores_Click(object sender, EventArgs e)
         {
@@ -162,7 +164,9 @@ namespace WindowsFormsApp1
                                                    where trabalhador.RestauranteId == restauranteSelecionado.Id
                                                    select trabalhador;
                 listBoxTrabalhadores.DataSource = trabalhadoresFromRestaurante.ToList();
-                listBoxMenu.DataSource = restauranteSelecionado.ItemMenus.ToList();
+                listBoxMenu.DataSource = (from item in restauranteSelecionado.ItemMenus.ToList()
+                                           where item.Ativo == true
+                                           select item).ToList();
             }
         }
 

@@ -89,6 +89,7 @@
             this.buttonExportar.TabIndex = 6;
             this.buttonExportar.Text = "Exportar (.txt)";
             this.buttonExportar.UseVisualStyleBackColor = true;
+            this.buttonExportar.Click += new System.EventHandler(this.buttonExportar_Click);
             // 
             // buttonRemoverPedidosCompletos
             // 
