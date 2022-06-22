@@ -31,7 +31,9 @@ namespace WindowsFormsApp1
         private void FormularioMenu_Load(object sender, EventArgs e)
         {
             restGestContainer = new RestGestContainer();
-            listBoxCategorias.DataSource = restGestContainer.Categorias.ToList();
+            listBoxCategorias.DataSource = (from categoria in restGestContainer.Categorias.ToList()
+                                           where categoria.Ativo == true
+                                           select categoria).ToList();
             LerDados();
         }
         private void LerDados()
@@ -41,7 +43,6 @@ namespace WindowsFormsApp1
 
         private void buttonAdicionarRestaurante_Click(object sender, EventArgs e)
         {
-            
             var categorias = from categoria in restGestContainer.Categorias.ToList()
                              where categoria.Ativo == true
                              select categoria;
@@ -53,14 +54,7 @@ namespace WindowsFormsApp1
                     ItemMenu novoItem = new ItemMenu();
                     novoItem.Nome = formAddItem.nome;
                     novoItem.Categoria = formAddItem.categoria;
-                    if(formAddItem.imagem != null)
-                    {
-                        novoItem.Fotografia = formAddItem.imagem;
-                    }
-                    else
-                    {
-                        novoItem.Fotografia = "asd";
-                    }
+                    novoItem.Fotografia = formAddItem.imagem;
                     novoItem.Ingredientes = formAddItem.ingredientes;
                     novoItem.Preco = formAddItem.preco;
                     novoItem.Ativo = formAddItem.ativo;
@@ -146,6 +140,11 @@ namespace WindowsFormsApp1
             labelIngredientes.Text = itemSelecionado.Ingredientes;
             labelPreco.Text = itemSelecionado.Preco + "€";
             labelAtivo.Text = itemSelecionado.Ativo ? "Sim" : "Não";
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
 
         }
     }

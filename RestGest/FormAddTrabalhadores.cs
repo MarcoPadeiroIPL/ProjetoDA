@@ -41,7 +41,53 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Tem de preencher todos os campos!");
                     return;
                 }
+                if (textBoxTelemovel.Text.Length != 9)
+                {
+                    MessageBox.Show("O telemovel tem de ter 9 digitos!");
+                    return;
+                }
+                if (!Decimal.TryParse(textBoxSalario.Text, out var n))
+                {
+                    MessageBox.Show("O Salario tem de ser um numero decimal");
+                    return;
+                }
+                for (int i = 0; i < 9; i++)
+                {
+                    if (!Char.IsDigit(textBoxTelemovel.Text[i]))
+                    {
+                        MessageBox.Show("Formato invalido! O telemovel tem de ser numerico!");
+                        return;
+                    }
+                    
+                }
 
+                if (textBoxCodPostal.Text.Length != 8)
+                {
+                    MessageBox.Show("O código postal tem de ter 8 digitos!");
+                    return;
+                }
+                else
+                {
+                    for (int i = 0; i < 8; i++)
+                    {
+                        if (i == 4)
+                        {
+                            if (textBoxCodPostal.Text[i] != '-')
+                            {
+                                MessageBox.Show("Formato invalido! Tem de ser xxxx-xxx !");
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            if (!Char.IsDigit(textBoxCodPostal.Text[i]))
+                            {
+                                MessageBox.Show("Formato invalido! Tem de ser numerico 1234-123 !");
+                                return;
+                            }
+                        }
+                    }
+                }
                 Morada novaMorada = new Morada();
                 novaMorada.Cidade = textBoxCidade.Text.Trim();
                 novaMorada.Pais = textBoxPais.Text.Trim();

@@ -40,15 +40,12 @@
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonPesquisarRestaurantes = new System.Windows.Forms.Button();
-            this.textBoxPesquisarRestaurantes = new System.Windows.Forms.TextBox();
             this.listBoxMenus = new System.Windows.Forms.ListBox();
             this.buttonAdicionarItem = new System.Windows.Forms.Button();
             this.buttonEditarItem = new System.Windows.Forms.Button();
             this.buttonRemoverItem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBoxCategorias = new System.Windows.Forms.ListBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.groupBoxItensMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -67,8 +64,6 @@
             this.groupBoxItensMenu.Controls.Add(this.pictureBox);
             this.groupBoxItensMenu.Controls.Add(this.label2);
             this.groupBoxItensMenu.Controls.Add(this.label1);
-            this.groupBoxItensMenu.Controls.Add(this.buttonPesquisarRestaurantes);
-            this.groupBoxItensMenu.Controls.Add(this.textBoxPesquisarRestaurantes);
             this.groupBoxItensMenu.Controls.Add(this.listBoxMenus);
             this.groupBoxItensMenu.Controls.Add(this.buttonAdicionarItem);
             this.groupBoxItensMenu.Controls.Add(this.buttonEditarItem);
@@ -183,29 +178,13 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Nome:";
             // 
-            // buttonPesquisarRestaurantes
-            // 
-            this.buttonPesquisarRestaurantes.Location = new System.Drawing.Point(226, 42);
-            this.buttonPesquisarRestaurantes.Name = "buttonPesquisarRestaurantes";
-            this.buttonPesquisarRestaurantes.Size = new System.Drawing.Size(38, 23);
-            this.buttonPesquisarRestaurantes.TabIndex = 13;
-            this.buttonPesquisarRestaurantes.Text = "Pesquisar";
-            this.buttonPesquisarRestaurantes.UseVisualStyleBackColor = true;
-            // 
-            // textBoxPesquisarRestaurantes
-            // 
-            this.textBoxPesquisarRestaurantes.Location = new System.Drawing.Point(16, 42);
-            this.textBoxPesquisarRestaurantes.Name = "textBoxPesquisarRestaurantes";
-            this.textBoxPesquisarRestaurantes.Size = new System.Drawing.Size(204, 20);
-            this.textBoxPesquisarRestaurantes.TabIndex = 13;
-            // 
             // listBoxMenus
             // 
             this.listBoxMenus.FormattingEnabled = true;
-            this.listBoxMenus.Location = new System.Drawing.Point(16, 90);
+            this.listBoxMenus.Location = new System.Drawing.Point(16, 38);
             this.listBoxMenus.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxMenus.Name = "listBoxMenus";
-            this.listBoxMenus.Size = new System.Drawing.Size(248, 160);
+            this.listBoxMenus.Size = new System.Drawing.Size(248, 212);
             this.listBoxMenus.TabIndex = 0;
             this.listBoxMenus.SelectedIndexChanged += new System.EventHandler(this.listBoxMenus_SelectedIndexChanged);
             // 
@@ -245,7 +224,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.listBoxCategorias);
-            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(214, 320);
@@ -259,18 +237,8 @@
             this.listBoxCategorias.Location = new System.Drawing.Point(5, 25);
             this.listBoxCategorias.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxCategorias.Name = "listBoxCategorias";
-            this.listBoxCategorias.Size = new System.Drawing.Size(198, 225);
+            this.listBoxCategorias.Size = new System.Drawing.Size(198, 290);
             this.listBoxCategorias.TabIndex = 0;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(42, 268);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(116, 36);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Adicionar categorias";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // FormularioMenu
             // 
@@ -294,15 +262,12 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxItensMenu;
-        private System.Windows.Forms.Button buttonPesquisarRestaurantes;
-        private System.Windows.Forms.TextBox textBoxPesquisarRestaurantes;
         private System.Windows.Forms.ListBox listBoxMenus;
         private System.Windows.Forms.Button buttonAdicionarItem;
         private System.Windows.Forms.Button buttonEditarItem;
         private System.Windows.Forms.Button buttonRemoverItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox listBoxCategorias;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label labelAtivo;
         private System.Windows.Forms.Label labelPreco;
         private System.Windows.Forms.Label labelIngredientes;

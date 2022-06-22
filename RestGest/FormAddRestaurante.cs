@@ -34,7 +34,33 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Tem de preencher todos os campos!");
                     return;
                 }
-
+                if (textBoxCodPostal.Text.Length != 8)
+                {
+                    MessageBox.Show("O código postal tem de ter 8 digitos!");
+                    return;
+                }
+                else
+                {
+                    for (int i = 0; i < 8; i++)
+                    {
+                        if (i == 4)
+                        {
+                            if (textBoxCodPostal.Text[i] != '-')
+                            {
+                                MessageBox.Show("Formato invalido! Tem de ser xxxx-xxx !");
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            if (!Char.IsDigit(textBoxCodPostal.Text[i]))
+                            {
+                                MessageBox.Show("Formato invalido! Tem de ser numerico 1234-123 !");
+                                return;
+                            }
+                        }
+                    }
+                }
                 Morada novaMorada = new Morada();
                 novaMorada.Cidade = textBoxCidade.Text.Trim();
                 novaMorada.Pais = textBoxPais.Text.Trim();

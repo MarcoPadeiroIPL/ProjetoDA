@@ -30,8 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonConsultar = new System.Windows.Forms.Button();
-            this.buttonPesquisarRestaurantes = new System.Windows.Forms.Button();
-            this.textBoxPesquisarRestaurantes = new System.Windows.Forms.TextBox();
             this.listBoxTrabalhadores = new System.Windows.Forms.ListBox();
             this.buttonAdicionarTrabalhadores = new System.Windows.Forms.Button();
             this.buttonEditarTrabalhadores = new System.Windows.Forms.Button();
@@ -55,8 +53,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.buttonConsultar);
-            this.groupBox1.Controls.Add(this.buttonPesquisarRestaurantes);
-            this.groupBox1.Controls.Add(this.textBoxPesquisarRestaurantes);
             this.groupBox1.Controls.Add(this.listBoxTrabalhadores);
             this.groupBox1.Controls.Add(this.buttonAdicionarTrabalhadores);
             this.groupBox1.Controls.Add(this.buttonEditarTrabalhadores);
@@ -79,29 +75,13 @@
             this.buttonConsultar.UseVisualStyleBackColor = true;
             this.buttonConsultar.Click += new System.EventHandler(this.buttonConsultar_Click);
             // 
-            // buttonPesquisarRestaurantes
-            // 
-            this.buttonPesquisarRestaurantes.Location = new System.Drawing.Point(310, 42);
-            this.buttonPesquisarRestaurantes.Name = "buttonPesquisarRestaurantes";
-            this.buttonPesquisarRestaurantes.Size = new System.Drawing.Size(38, 23);
-            this.buttonPesquisarRestaurantes.TabIndex = 13;
-            this.buttonPesquisarRestaurantes.Text = "Pesquisar";
-            this.buttonPesquisarRestaurantes.UseVisualStyleBackColor = true;
-            // 
-            // textBoxPesquisarRestaurantes
-            // 
-            this.textBoxPesquisarRestaurantes.Location = new System.Drawing.Point(16, 42);
-            this.textBoxPesquisarRestaurantes.Name = "textBoxPesquisarRestaurantes";
-            this.textBoxPesquisarRestaurantes.Size = new System.Drawing.Size(288, 20);
-            this.textBoxPesquisarRestaurantes.TabIndex = 13;
-            // 
             // listBoxTrabalhadores
             // 
             this.listBoxTrabalhadores.FormattingEnabled = true;
-            this.listBoxTrabalhadores.Location = new System.Drawing.Point(16, 90);
+            this.listBoxTrabalhadores.Location = new System.Drawing.Point(16, 25);
             this.listBoxTrabalhadores.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxTrabalhadores.Name = "listBoxTrabalhadores";
-            this.listBoxTrabalhadores.Size = new System.Drawing.Size(332, 264);
+            this.listBoxTrabalhadores.Size = new System.Drawing.Size(332, 329);
             this.listBoxTrabalhadores.TabIndex = 0;
             // 
             // buttonAdicionarTrabalhadores
@@ -267,7 +247,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormularioGestaoIndividualRestaurantes_FormClosing);
             this.Load += new System.EventHandler(this.FormularioGestaoIndividualRestaurantes_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -278,8 +257,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button buttonPesquisarRestaurantes;
-        private System.Windows.Forms.TextBox textBoxPesquisarRestaurantes;
         private System.Windows.Forms.ListBox listBoxTrabalhadores;
         private System.Windows.Forms.Button buttonAdicionarTrabalhadores;
         private System.Windows.Forms.Button buttonEditarTrabalhadores;

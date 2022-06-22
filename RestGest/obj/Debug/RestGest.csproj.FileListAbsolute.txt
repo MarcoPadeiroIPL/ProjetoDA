@@ -65,3 +65,59 @@ C:\Users\Marco\Desktop\Escola\DA\RestGest\ProjetoDA\RestGest\obj\Debug\WindowsFo
 C:\Users\Marco\Desktop\Escola\DA\RestGest\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddTrabalhadores.resources
 C:\Users\Marco\Desktop\Escola\DA\RestGest\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddPedido.resources
 C:\Users\Marco\Desktop\Escola\DA\RestGest\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddItem.resources
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\bin\Debug\WindowsFormsApp1.exe
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\bin\Debug\EntityFramework.dll
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\bin\Debug\EntityFramework.xml
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\RestGest.csprojAssemblyReference.cache
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddCategoria.resources
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddClientes.resources
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddItem.resources
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddMetodo.resources
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddPedido.resources
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddRestaurante.resources
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddTrabalhadores.resources
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormularioGestaoClientes.resources
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormularioGestaoGlobalRestaurantes.resources
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormularioGestaoIndividualRestaurantes.resources
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormularioPedidos.resources
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormularioMenu.resources
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormularioPrincipal.resources
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\RestGest.csproj.GenerateResource.cache
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\RestGest.csproj.CoreCompileInputs.cache
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\RestGest.csproj.CopyComplete
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.exe
+C:\Users\tomas\OneDrive\Ambiente de Trabalho\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\bin\Debug\EntityFramework.dll
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\bin\Debug\EntityFramework.xml
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\RestGest.csproj.AssemblyReference.cache
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\RestGest.csproj.SuggestedBindingRedirects.cache
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddCategoria.resources
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddClientes.resources
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddItem.resources
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddMetodo.resources
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddPagamento.resources
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddPedido.resources
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddRestaurante.resources
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormAddTrabalhadores.resources
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormularioGestaoClientes.resources
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormularioGestaoGlobalRestaurantes.resources
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormularioGestaoIndividualRestaurantes.resources
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormularioPedidos.resources
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormularioMenu.resources
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.FormularioPrincipal.resources
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\RestGest.csproj.GenerateResource.cache
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\RestGest.csproj.CoreCompileInputs.cache
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\RestGest.csproj.CopyComplete
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Marco\Desktop\Escola\DA\Projeto\ProjetoDA\ProjetoDA\RestGest\obj\Debug\WindowsFormsApp1.pdb

@@ -37,5 +37,9 @@ namespace WindowsFormsApp1
         public virtual ICollection<ItemMenu> ItemMenus { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pagamento> Pagamentos { get; set; }
+        public override string ToString()
+        {
+            return this.Id + "- " + this.Cliente.Nome + " - " + this.ValorTotal + "€";
+        }
     }
 }
