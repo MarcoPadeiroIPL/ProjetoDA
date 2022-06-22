@@ -97,6 +97,20 @@
             this.buttonExportar.Text = "Exportar (.txt)";
             this.buttonExportar.UseVisualStyleBackColor = true;
             this.buttonExportar.Click += new System.EventHandler(this.buttonExportar_Click);
+<<<<<<< HEAD
+=======
+            // 
+            // buttonRemoverPedidosCompletos
+            // 
+            this.buttonRemoverPedidosCompletos.Location = new System.Drawing.Point(159, 367);
+            this.buttonRemoverPedidosCompletos.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonRemoverPedidosCompletos.Name = "buttonRemoverPedidosCompletos";
+            this.buttonRemoverPedidosCompletos.Size = new System.Drawing.Size(80, 36);
+            this.buttonRemoverPedidosCompletos.TabIndex = 9;
+            this.buttonRemoverPedidosCompletos.Text = "Remover";
+            this.buttonRemoverPedidosCompletos.UseVisualStyleBackColor = true;
+            this.buttonRemoverPedidosCompletos.Click += new System.EventHandler(this.buttonRemoverPedidosCompletos_Click);
+>>>>>>> a2d8ea5ef91f0ce7b720b6e925120d81b42c58eb
             // 
             // buttonGerirPedidoProcessamento
             // 

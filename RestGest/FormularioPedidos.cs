@@ -29,18 +29,28 @@ namespace WindowsFormsApp1
 
         private void buttonCriarNovoPedido_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Estado estado = restGestContainer.Estados.Find(1);
             List<Cliente> clientes = restGestContainer.Pessoas.OfType<Cliente>().ToList();
             List<Trabalhador> trabalhadors = restGestContainer.Pessoas.OfType<Trabalhador>().ToList();
             List<ItemMenu> totalItensMenus = restGestContainer.ItemMenus.ToList();
             using (FormAddPedido formAddPedido = new FormAddPedido(clientes, trabalhadors, totalItensMenus, new List<ItemMenu>(), estado))
+=======
+            var estado = restGestContainer.Estados.Find(1);
+            using (FormAddPedido formAddPedido = new FormAddPedido(restaurante, new List<ItemMenu>(), estado))
+>>>>>>> a2d8ea5ef91f0ce7b720b6e925120d81b42c58eb
             {
                 var result = formAddPedido.ShowDialog();
                 if (result == DialogResult.OK)
                 {
                     Pedido novoPedido = new Pedido();
+<<<<<<< HEAD
                     novoPedido.Restaurante = restGestContainer.Restaurantes.Find(restaurante.Id);
                     novoPedido.Estado = estado;
+=======
+                    novoPedido.Restaurante = restaurante;
+                    novoPedido.Estado = formAddPedido.estado;
+>>>>>>> a2d8ea5ef91f0ce7b720b6e925120d81b42c58eb
                     novoPedido.Trabalhador = formAddPedido.trabalhador;
                     novoPedido.Cliente = formAddPedido.cliente;
 
@@ -314,6 +324,10 @@ namespace WindowsFormsApp1
                     LerDados();
                 }
             }
+        }
+
+        private void buttonExportar_Click(object sender, EventArgs e)
+        {
         }
     }
 }
