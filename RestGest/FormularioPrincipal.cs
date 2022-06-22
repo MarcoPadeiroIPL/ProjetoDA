@@ -15,16 +15,12 @@ namespace WindowsFormsApp1
         private FormularioGestaoClientes formClientes;
         private FormularioGestaoGlobalRestaurantes formGlobalRestaurantes;
         private FormularioGestaoIndividualRestaurantes formIndividualRestaurantes;
-        private FormularioMenu formMenu;
-        private FormularioPedidos formPedidos;
         public FormularioPrincipal()
         {
             InitializeComponent();
             formClientes = new FormularioGestaoClientes();
             formGlobalRestaurantes = new FormularioGestaoGlobalRestaurantes();
             formIndividualRestaurantes = new FormularioGestaoIndividualRestaurantes();
-            formMenu = new FormularioMenu();
-            formPedidos = new FormularioPedidos();
         }
 
         private void buttonClientes_Click(object sender, EventArgs e)
@@ -43,15 +39,5 @@ namespace WindowsFormsApp1
 
         }
 
-        private void buttonMenus_Click(object sender, EventArgs e)
-        {
-            formMenu.ShowDialog();
-
-        }
-
-        private void buttonPedidos_Click(object sender, EventArgs e)
-        {
-            formPedidos.ShowDialog();
-        }
     }
 }

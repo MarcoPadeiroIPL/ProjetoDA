@@ -33,15 +33,16 @@
             this.listBoxPedidosCompletos = new System.Windows.Forms.ListBox();
             this.buttonExportar = new System.Windows.Forms.Button();
             this.buttonRemoverPedidosCompletos = new System.Windows.Forms.Button();
-            this.buttonRemoverPedidosProcessamento = new System.Windows.Forms.Button();
+            this.buttonGerirPedidoProcessamento = new System.Windows.Forms.Button();
             this.buttonCompletar = new System.Windows.Forms.Button();
             this.listBoxPedidosEmProcessamento = new System.Windows.Forms.ListBox();
             this.groupBoxItensMenu = new System.Windows.Forms.GroupBox();
+            this.buttonAdicionarPagamentos = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonAvancarRecebidos = new System.Windows.Forms.Button();
             this.buttonGerirPedido = new System.Windows.Forms.Button();
             this.listBoxPedidosRecebidos = new System.Windows.Forms.ListBox();
             this.buttonRemoverPedidosRecebidos = new System.Windows.Forms.Button();
-            this.buttonAdicionarPagamentos = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBoxItensMenu.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -56,6 +57,7 @@
             this.buttonCriarNovoPedido.TabIndex = 3;
             this.buttonCriarNovoPedido.Text = "Criar novo pedido";
             this.buttonCriarNovoPedido.UseVisualStyleBackColor = true;
+            this.buttonCriarNovoPedido.Click += new System.EventHandler(this.buttonCriarNovoPedido_Click);
             // 
             // groupBox1
             // 
@@ -97,17 +99,18 @@
             this.buttonRemoverPedidosCompletos.TabIndex = 9;
             this.buttonRemoverPedidosCompletos.Text = "Remover";
             this.buttonRemoverPedidosCompletos.UseVisualStyleBackColor = true;
+            this.buttonRemoverPedidosCompletos.Click += new System.EventHandler(this.buttonRemoverPedidosCompletos_Click);
             // 
-            // buttonRemoverPedidosProcessamento
+            // buttonGerirPedidoProcessamento
             // 
-            this.buttonRemoverPedidosProcessamento.Location = new System.Drawing.Point(184, 367);
-            this.buttonRemoverPedidosProcessamento.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonRemoverPedidosProcessamento.Name = "buttonRemoverPedidosProcessamento";
-            this.buttonRemoverPedidosProcessamento.Size = new System.Drawing.Size(80, 36);
-            this.buttonRemoverPedidosProcessamento.TabIndex = 9;
-            this.buttonRemoverPedidosProcessamento.Text = "Remover";
-            this.buttonRemoverPedidosProcessamento.UseVisualStyleBackColor = true;
-            this.buttonRemoverPedidosProcessamento.Click += new System.EventHandler(this.buttonRemoverRestaurante_Click);
+            this.buttonGerirPedidoProcessamento.Location = new System.Drawing.Point(16, 367);
+            this.buttonGerirPedidoProcessamento.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonGerirPedidoProcessamento.Name = "buttonGerirPedidoProcessamento";
+            this.buttonGerirPedidoProcessamento.Size = new System.Drawing.Size(80, 36);
+            this.buttonGerirPedidoProcessamento.TabIndex = 9;
+            this.buttonGerirPedidoProcessamento.Text = "Gerir Pedido";
+            this.buttonGerirPedidoProcessamento.UseVisualStyleBackColor = true;
+            this.buttonGerirPedidoProcessamento.Click += new System.EventHandler(this.buttonRemoverRestaurante_Click);
             // 
             // buttonCompletar
             // 
@@ -118,6 +121,7 @@
             this.buttonCompletar.TabIndex = 6;
             this.buttonCompletar.Text = "Completar";
             this.buttonCompletar.UseVisualStyleBackColor = true;
+            this.buttonCompletar.Click += new System.EventHandler(this.buttonCompletar_Click);
             // 
             // listBoxPedidosEmProcessamento
             // 
@@ -133,7 +137,7 @@
             this.groupBoxItensMenu.Controls.Add(this.buttonAdicionarPagamentos);
             this.groupBoxItensMenu.Controls.Add(this.listBoxPedidosEmProcessamento);
             this.groupBoxItensMenu.Controls.Add(this.buttonCompletar);
-            this.groupBoxItensMenu.Controls.Add(this.buttonRemoverPedidosProcessamento);
+            this.groupBoxItensMenu.Controls.Add(this.buttonGerirPedidoProcessamento);
             this.groupBoxItensMenu.Location = new System.Drawing.Point(450, 12);
             this.groupBoxItensMenu.Name = "groupBoxItensMenu";
             this.groupBoxItensMenu.Size = new System.Drawing.Size(284, 418);
@@ -141,8 +145,19 @@
             this.groupBoxItensMenu.TabStop = false;
             this.groupBoxItensMenu.Text = "Pedidos em processamento";
             // 
+            // buttonAdicionarPagamentos
+            // 
+            this.buttonAdicionarPagamentos.Location = new System.Drawing.Point(184, 367);
+            this.buttonAdicionarPagamentos.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAdicionarPagamentos.Name = "buttonAdicionarPagamentos";
+            this.buttonAdicionarPagamentos.Size = new System.Drawing.Size(80, 36);
+            this.buttonAdicionarPagamentos.TabIndex = 10;
+            this.buttonAdicionarPagamentos.Text = "Adicionar Pagamento";
+            this.buttonAdicionarPagamentos.UseVisualStyleBackColor = true;
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.buttonAvancarRecebidos);
             this.groupBox2.Controls.Add(this.buttonGerirPedido);
             this.groupBox2.Controls.Add(this.listBoxPedidosRecebidos);
             this.groupBox2.Controls.Add(this.buttonRemoverPedidosRecebidos);
@@ -153,9 +168,20 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pedidos recebidos";
             // 
+            // buttonAvancarRecebidos
+            // 
+            this.buttonAvancarRecebidos.Location = new System.Drawing.Point(100, 367);
+            this.buttonAvancarRecebidos.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAvancarRecebidos.Name = "buttonAvancarRecebidos";
+            this.buttonAvancarRecebidos.Size = new System.Drawing.Size(80, 36);
+            this.buttonAvancarRecebidos.TabIndex = 11;
+            this.buttonAvancarRecebidos.Text = "Avançar";
+            this.buttonAvancarRecebidos.UseVisualStyleBackColor = true;
+            this.buttonAvancarRecebidos.Click += new System.EventHandler(this.buttonAvancarRecebidos_Click);
+            // 
             // buttonGerirPedido
             // 
-            this.buttonGerirPedido.Location = new System.Drawing.Point(48, 367);
+            this.buttonGerirPedido.Location = new System.Drawing.Point(16, 367);
             this.buttonGerirPedido.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGerirPedido.Name = "buttonGerirPedido";
             this.buttonGerirPedido.Size = new System.Drawing.Size(80, 36);
@@ -174,23 +200,14 @@
             // 
             // buttonRemoverPedidosRecebidos
             // 
-            this.buttonRemoverPedidosRecebidos.Location = new System.Drawing.Point(156, 367);
+            this.buttonRemoverPedidosRecebidos.Location = new System.Drawing.Point(184, 367);
             this.buttonRemoverPedidosRecebidos.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRemoverPedidosRecebidos.Name = "buttonRemoverPedidosRecebidos";
             this.buttonRemoverPedidosRecebidos.Size = new System.Drawing.Size(80, 36);
             this.buttonRemoverPedidosRecebidos.TabIndex = 9;
             this.buttonRemoverPedidosRecebidos.Text = "Remover";
             this.buttonRemoverPedidosRecebidos.UseVisualStyleBackColor = true;
-            // 
-            // buttonAdicionarPagamentos
-            // 
-            this.buttonAdicionarPagamentos.Location = new System.Drawing.Point(16, 367);
-            this.buttonAdicionarPagamentos.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonAdicionarPagamentos.Name = "buttonAdicionarPagamentos";
-            this.buttonAdicionarPagamentos.Size = new System.Drawing.Size(80, 36);
-            this.buttonAdicionarPagamentos.TabIndex = 10;
-            this.buttonAdicionarPagamentos.Text = "Adicionar Pagamento";
-            this.buttonAdicionarPagamentos.UseVisualStyleBackColor = true;
+            this.buttonRemoverPedidosRecebidos.Click += new System.EventHandler(this.buttonRemoverPedidosRecebidos_Click);
             // 
             // FormularioPedidos
             // 
@@ -204,6 +221,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormularioPedidos";
             this.Text = "Pedidos";
+            this.Load += new System.EventHandler(this.FormularioPedidos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBoxItensMenu.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -217,7 +235,7 @@
         private System.Windows.Forms.ListBox listBoxPedidosCompletos;
         private System.Windows.Forms.Button buttonExportar;
         private System.Windows.Forms.Button buttonRemoverPedidosCompletos;
-        private System.Windows.Forms.Button buttonRemoverPedidosProcessamento;
+        private System.Windows.Forms.Button buttonGerirPedidoProcessamento;
         private System.Windows.Forms.Button buttonCompletar;
         private System.Windows.Forms.ListBox listBoxPedidosEmProcessamento;
         private System.Windows.Forms.GroupBox groupBoxItensMenu;
@@ -226,5 +244,6 @@
         private System.Windows.Forms.Button buttonGerirPedido;
         private System.Windows.Forms.ListBox listBoxPedidosRecebidos;
         private System.Windows.Forms.Button buttonRemoverPedidosRecebidos;
+        private System.Windows.Forms.Button buttonAvancarRecebidos;
     }
 }

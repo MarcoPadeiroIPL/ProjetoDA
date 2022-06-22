@@ -76,6 +76,12 @@
     <Compile Include="FormAddClientes.Designer.cs">
       <DependentUpon>FormAddClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddItem.Designer.cs">
+      <DependentUpon>FormAddItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddMetodo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     <EmbeddedResource Include="FormAddClientes.resx">
       <DependentUpon>FormAddClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAddItem.resx">
+      <DependentUpon>FormAddItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddMetodo.resx">
       <DependentUpon>FormAddMetodo.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +273,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Imagens\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

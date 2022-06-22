@@ -29,8 +29,7 @@ namespace WindowsFormsApp1
 
         public override string ToString()
         {
-            string ativoString = this.Ativo == true ? "Ativo" : "Não ativo";
-            return this.Nome + " (" + ativoString + ")";
+            return this.Nome;
         }
     }
 }

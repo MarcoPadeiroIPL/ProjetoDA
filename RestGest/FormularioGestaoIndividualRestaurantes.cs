@@ -108,7 +108,7 @@ namespace WindowsFormsApp1
             {
                 if (itemSelecionado != null)
                 {
-                    restGestContainer.Restaurantes.Find(restauranteSelecionado).ItemMenus.Add(itemSelecionado);
+                    restauranteSelecionado.ItemMenus.Add(itemSelecionado);
                     restGestContainer.SaveChanges();
                     LerDados();
                 }
@@ -118,12 +118,12 @@ namespace WindowsFormsApp1
         private void buttonRemoverItemMenu_Click(object sender, EventArgs e)
         {
             Restaurante restauranteSelecionado = comboBoxRestaurantes.SelectedItem as Restaurante;
-            ItemMenu itemSelecionado = listBoxItensMenu.SelectedItem as ItemMenu;
+            ItemMenu itemSelecionado = listBoxMenu.SelectedItem as ItemMenu;
             if (restauranteSelecionado != null)
             {
                 if (itemSelecionado != null)
                 {
-                    restGestContainer.Restaurantes.Find(restauranteSelecionado).ItemMenus.Remove(itemSelecionado);
+                    restauranteSelecionado.ItemMenus.Remove(itemSelecionado);
                     restGestContainer.SaveChanges();
                     LerDados();
                 }
@@ -131,7 +131,7 @@ namespace WindowsFormsApp1
         }
         private void buttonPedidos_Click(object sender, EventArgs e)
         {
-            FormularioPedidos formPedidos = new FormularioPedidos();
+            FormularioPedidos formPedidos = new FormularioPedidos(comboBoxRestaurantes.SelectedItem as Restaurante);
             formPedidos.ShowDialog();
         }
         private void buttonMenu_Click(object sender, EventArgs e)

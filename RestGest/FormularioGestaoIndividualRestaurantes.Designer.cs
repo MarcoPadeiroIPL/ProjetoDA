@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonConsultar = new System.Windows.Forms.Button();
             this.buttonPesquisarRestaurantes = new System.Windows.Forms.Button();
             this.textBoxPesquisarRestaurantes = new System.Windows.Forms.TextBox();
             this.listBoxTrabalhadores = new System.Windows.Forms.ListBox();
@@ -46,7 +47,6 @@
             this.buttonRemoverItemMenu = new System.Windows.Forms.Button();
             this.buttonPedidos = new System.Windows.Forms.Button();
             this.buttonMenu = new System.Windows.Forms.Button();
-            this.buttonConsultar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -67,6 +67,17 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Trabalhadores";
+            // 
+            // buttonConsultar
+            // 
+            this.buttonConsultar.Location = new System.Drawing.Point(268, 367);
+            this.buttonConsultar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonConsultar.Name = "buttonConsultar";
+            this.buttonConsultar.Size = new System.Drawing.Size(80, 36);
+            this.buttonConsultar.TabIndex = 14;
+            this.buttonConsultar.Text = "Consultar";
+            this.buttonConsultar.UseVisualStyleBackColor = true;
+            this.buttonConsultar.Click += new System.EventHandler(this.buttonConsultar_Click);
             // 
             // buttonPesquisarRestaurantes
             // 
@@ -220,7 +231,7 @@
             // 
             // buttonPedidos
             // 
-            this.buttonPedidos.Location = new System.Drawing.Point(508, 389);
+            this.buttonPedidos.Location = new System.Drawing.Point(471, 376);
             this.buttonPedidos.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPedidos.Name = "buttonPedidos";
             this.buttonPedidos.Size = new System.Drawing.Size(170, 97);
@@ -231,7 +242,7 @@
             // 
             // buttonMenu
             // 
-            this.buttonMenu.Location = new System.Drawing.Point(760, 389);
+            this.buttonMenu.Location = new System.Drawing.Point(718, 376);
             this.buttonMenu.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMenu.Name = "buttonMenu";
             this.buttonMenu.Size = new System.Drawing.Size(170, 97);
@@ -239,17 +250,6 @@
             this.buttonMenu.Text = "Gerir Itens de Menu Globais";
             this.buttonMenu.UseVisualStyleBackColor = true;
             this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
-            // 
-            // buttonConsultar
-            // 
-            this.buttonConsultar.Location = new System.Drawing.Point(268, 367);
-            this.buttonConsultar.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonConsultar.Name = "buttonConsultar";
-            this.buttonConsultar.Size = new System.Drawing.Size(80, 36);
-            this.buttonConsultar.TabIndex = 14;
-            this.buttonConsultar.Text = "Consultar";
-            this.buttonConsultar.UseVisualStyleBackColor = true;
-            this.buttonConsultar.Click += new System.EventHandler(this.buttonConsultar_Click);
             // 
             // FormularioGestaoIndividualRestaurantes
             // 
